@@ -10,7 +10,9 @@ app.use(express.json());
 // app.use(express.static('frontend'));
 app.use(express.static('frontend/homepage'));
 app.use('/art', express.static('frontend/art'));
-
+app.use('/music', express.static('frontend/music'));
+app.use('/language', express.static('frontend/language'));
+app.use('/history', express.static('frontend/history'));
 
 // app.use(express.static('/frontend/history/history.html'));
 // app.use(express.static('/frontend/music/music.html'));
@@ -22,6 +24,22 @@ app.get('/', (req, res) => {
 
 app.get('/countriesData', (req, res) => {
     res.send(countries)
+})
+
+app.get('/art', (req, res) => {
+    res.send('/art.index.html')
+})
+
+app.get('/music', (req, res) => {
+    res.send('/music.index.html')
+})
+
+app.get('/language', (req, res) => {
+    res.send('/language.index.html')
+})
+
+app.get('/history', (req, res) => {
+    res.send('/history.index.html')
 })
 
 app.listen(port, () => {
