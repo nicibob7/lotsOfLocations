@@ -1,0 +1,36 @@
+/* #aad3de colour of map*/
+
+body {
+    background-color: #aad3de;
+}
+
+#map { 
+    height: 600px;
+    width: calc(100% - 160px); 
+    margin: 20px auto; 
+   
+}
+
+nav, #container {
+    margin-top: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+}
+
+nav {
+    margin-left: 50px ;
+}
+
+#container {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.marker {
+background-color: aqua;
+color: white;
+}
+
