@@ -38,9 +38,6 @@ app.get('/language', (req, res) => {
     res.send('/language.index.html')
 })
 
-app.get('/history', (req, res) => {
-    res.send('/history.index.html')
-})
 
 app.listen(port, () => {
     console.log(`API listening on port ${port}.`);
