@@ -7,6 +7,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use(express.static('frontend'));
+app.use(express.static('/frontend/art/art.html'));
+app.use(express.static('/frontend/history/history.html'));
+app.use(express.static('/frontend/history/music.html'));
 
 app.get('/', (req, res) => {
     res.send()
