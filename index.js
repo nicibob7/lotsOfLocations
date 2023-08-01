@@ -44,7 +44,7 @@ app.get('/language', (req, res) => {
 })
 
 app.get('/countryhomepage', (req, res) => {
-    res.send('/.index.html')
+    res.send('/countryhomepage.index.html')
 })
 
 app.get('/map', (req, res) => {
