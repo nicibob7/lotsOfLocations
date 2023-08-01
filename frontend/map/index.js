@@ -1,67 +1,112 @@
-let answers; //initialising answers, then will be assigned when json object is fetched, the answers will then hold the value of the key answer
-let questions; ////initialising questions, then will be assigned when json object is fetched, the answers will then hold the value of the key answer
-
-
-//initialising the map from leaflet - setting the view lon and lat, and zoom level
-const map = L.map('map').setView([45.505, 9], 1);
+// const steps = require('./questions')
+let map = L.map('map').setView([10.505, 1], 2);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 3, //max zoom initially 2 - cannot zoom in to see names of place //set back to tqo so you cannot see the name 
+    maxZoom: 2, //max zoom initially 2 - cannot zoom in to see names of place //set back to tqo so you cannot see the name 
     minZoom: 2, //cannot zoom out from start
     
 }).addTo(map); 
 
+
+
+
+
+const popUpContent = document.querySelector('.popup-content')
+const question = document.querySelector('.popup-content p')
+const userInput = document.querySelector('.popup-content')
+const labelElement = document.querySelector('label[for="answer"]');
+const inputElement = document.querySelector('#answer');
 const submitAnswer = document.querySelector('#submitAnswer');
-const marker = L.marker([39.5, -2]).addTo(map);
-
-submitAnswer.addEventListener('click', submit)
-
-marker.bindPopup("Guess what country I am!<br> You can input your answer in the box below.").openPopup();
-
-// //intitial pop up that enabled it to be onclick where two messages were shown  eg spain outline to cover the area of spain that can then be clicked on 
-// const spainIcon = L.icon({
-//     //iconUrl: 'assets/spainoutline.png',
-//     iconSize:     [179, 132], // size of the icon
-//     shadowSize:   [50, 64], // size of the shadow
-//     iconAnchor:   [22, 90], // point of the icon which will correspond to marker's location
-//     shadowAnchor: [9, 62],  // the same for the shadow
-//     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-// });
-
-// const initialPopUp = 'Guess what country I am!<br> You can input your answer in the box below.';
-
-// const secondPopUp = 'Guess again! ';
-
-// const popUp = L.marker([38.5547, - 7.99], {icon: spainIcon}).addTo(map).bindPopup(initialPopUp);
-
-// let isInitialContent = true;
-
-// function changePopUp() {
-//     if (isInitialContent) {
-//         popUp.setPopupContent(initialPopUp)
-//     } else {
-//         popUp.setPopupContent(secondPopUp);
-//     }
-//     isInitialContent = !isInitialContent;
-
-//     popUp.openPopup();
-// }
-// popUp.on('click', changePopUp);
+const marker = L.marker([-32.33, -55.48]).addTo(map);
+const howToPlay = document.querySelector('#container')
+let isShowingRules = false;
 
 
 
-//making a function that checks the answer is right (and making it lowercase) then logs it to the console and clears the field, if not it alerts wrong answer please try again
-function submit(e) {
-    e.preventDefault();
-    let answerInput = answer.value.toLowerCase()
 
-    if (answerInput === 'spain'){
-        console.log(answerInput);
-    answer.value = '';
+
+const questions = [
+    {
+      question: "What country is this?",
+      correctAnswer: "uruguay",
+      nextQuestion: "What is the capital city of this country?",
+    },
+    {
+      question: "What is the capital city of this country?",
+      correctAnswer: "montevideo",
+      nextQuestion: "What language is spoken most in this country?",
+    },
+    {
+      question: "What language is spoken most in this country?",
+      correctAnswer: "spanish",
+      nextQuestion: "Press the button here to learn about Uruguay!",
+    },
+  ];
+
+  let currentQuestionIndex = 0;
+
+  function moveToNextQuestion() {
+    currentQuestionIndex++;
+    
+    if (currentQuestionIndex < questions.length) {
+        question.textContent = questions[currentQuestionIndex].question;
+        answer.value = '';
     } else {
-    alert('wrong answer, please try again')
-    answer.value = '';
+        alert('All the questions have been answered,now time to learn about Uruguay!');
+        question.textContent = questions[currentQuestionIndex - 1].nextQuestion;
+        submitAnswer.style.fontSize = "50px";
+        submitAnswer.textContent = 'PRESS HERE';
+        const labelElement = document.querySelector("label[for='answer']");
+        labelElement.remove();
+        answer.remove();
+        submitAnswer.addEventListener("click", function () {
+            window.location.href = "https://www.bbc.com";
+        });
+    }
+  }
+
+  submitAnswer.addEventListener('click', function (e) {
+    e.preventDefault();
+    const answerInput = answer.value.toLowerCase();
+    
+    if (answerInput === questions[currentQuestionIndex].correctAnswer) {
+        console.log(answerInput);
+        answer.value = '';
+        alert("Correct! Now try the next one");
+        moveToNextQuestion();
+    } else {
+        alert("Wrong answer, please try again!")
+        answer.value = '';
+        
+    }
+  });
+
+  question.textContent = questions[currentQuestionIndex].question;
+
+  marker.bindPopup(popUpContent).openPopup();
+
+  
+
+
+howToPlay.addEventListener('click', toggleRules)
+
+
+
+
+function toggleRules() {
+    if (isShowingRules) {
+        const paragraph = howToPlay.querySelector('p');
+        if (paragraph) {
+            howToPlay.removeChild(paragraph);
+        }
+        isShowingRules = false;
+    } else {
+        const paragraph = document.createElement('p');
+    paragraph.textContent = "To enter and learn about a specific country, you need to enter three correct answers to the questions provided. If sucessfully answered, a button will appear to enter the country page. If for any reason you are in doubt after 5 incorrect tries, a button will appear in the popup that will lead you to the page. Good luck!";
+   howToPlay.appendChild(paragraph);
+   isShowingRules = true;
     }
 }
+
 
 
 
@@ -92,4 +137,5 @@ async function getAnswers() {
         console.log(e)
     }
 }
+
 
