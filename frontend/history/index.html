@@ -1,24 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOL - Uruguay's History </title>
-</head>
-<body>
-    <header></header>
-    <nav>
-        <ul>
-           <a href="/frontend/"> <li>Back to MapGame page</li></a>
-            <li>Uruguay's Music</li>
-            <li>Uruguay's Language</li>
-            <li>Uruguay's Art</li>
-            <li>Back to Home</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOL - Uruguay's History</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/frontend/map"
+        ><img
+          class="logo"
+          src="https://w7.pngwing.com/pngs/285/815/png-transparent-computer-icons-geography-map-logo-silhouette-map.png"
+          alt="logo"
+      /></a>
+      <nav>
+        <ul class="nav_links">
+          <li><a href="/map/">Map</a></li>
+          <li><a href="/music/">Music</a></li>
+          <li><a href="/language/">Language</a></li>
+          <li><a href="/art/">Art</a></li>
         </ul>
-    </nav>
-    <h1>
-        Uruguay's History
-    </h1>
-
-</body>
+      </nav>
+      <a class="home" href="/homepage/"><button>Home</button></a>
+    </header>
+    <h1>Uruguay's History</h1>
+    <section class="columns">
+      <div class="column" onclick="flipColumn(1)">
+        <h2>Early 20th century</h2>
+        <ul>
+          <li>
+            The first half of the 20th century saw Uruguay as one of the most
+            prosperous nations in Latin America, known for its political
+            stability, social welfare programs, and progressive policies.
+          </li>
+          <li>
+            In 1903, the Colorado Party and the National Party established a
+            bipartisan system that dominated Uruguayan politics for decades.
+          </li>
+        </ul>
+      </div>
+      <div class="column" onclick="flipColumn(2)">
+        <h2>Mid-20th century</h2>
+        <ul>
+          <li>
+            In the mid-20th century, Uruguay faced some political challenges,
+            including military interventions and economic fluctuations.
+          </li>
+          <li>
+            In the 1950s and 1960s, the country experienced a period of economic
+            growth and industrialization, known as the "Uruguayan miracle."
+          </li>
+          <li>
+            However, political repression and human rights violations increased
+            during the 1960s and 1970s as Uruguay faced the rise of leftist
+            guerrilla movements and growing tensions.
+          </li>
+        </ul>
+      </div>
+      <div class="column" onclick="flipColumn(3)">
+        <h2>Late 20th century</h2>
+        <ul>
+          <li>
+            In 1973, a military coup took place, leading to the establishment of
+            a military dictatorship. This period, known as the "Dirty War,"
+            involved widespread human rights abuses, including torture and
+            forced disappearances.
+          </li>
+          <li>
+            The military dictatorship ruled until 1985 when Uruguay transitioned
+            back to democracy, marking the beginning of a new era of political
+            freedom and civil liberties.
+          </li>
+          <li>
+            In 1989, the left-leaning Frente Amplio (Broad Front) coalition was
+            formed, becoming a major political force in Uruguay.
+          </li>
+        </ul>
+      </div>
+      <div class="column" onclick="flipColumn(4)">
+        <h2>21st century</h2>
+        <ul>
+          <li>
+            In the early 2000s, Uruguay faced economic challenges, including a
+            severe financial crisis. However, the country implemented various
+            reforms that contributed to its recovery.
+          </li>
+          <li>
+            During the 2010s, Uruguay continued to enjoy a relatively stable
+            political climate and social progress, including the legalization of
+            same-sex marriage (2013) and the decriminalization of abortion
+            (2012).
+          </li>
+          <li>
+            The country also pursued a progressive drug policy, legalizing the
+            production, sale, and consumption of marijuana in 2013, becoming the
+            first country in the world to do so.
+          </li>
+          <li>
+            In 2019, Luis Lacalle Pou, a member of the center-right National
+            Party, won the presidential election, ending 15 years of left-wing
+            rule under the Frente Amplio.
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
 </html>
