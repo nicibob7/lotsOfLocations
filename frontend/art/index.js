@@ -42,6 +42,7 @@ function displayScreenshot(imageURL) {
     screenShotImage.height = 200;
     imageGallery.appendChild(screenshotDiv);
     screenshotDiv.appendChild(screenShotImage)
+
 }
 
 
@@ -72,4 +73,26 @@ function updateStrokeSize() {
 
 function eraseDrawing() {
   background(255); 
+}
+
+const whatToDo = document.querySelector('h2')
+let isShowingRules = false;
+
+
+whatToDo.addEventListener('click', toggleRules)
+
+
+function toggleRules() {
+    if (isShowingRules) {
+        const paragraph = whatToDo.querySelector('p');
+        if (paragraph) {
+            whatToDo.removeChild(paragraph);
+        }
+        isShowingRules = false;
+    } else {
+        const paragraph = document.createElement('p');
+    paragraph.textContent = "Here is a space to be able to draw your thoughts and feelings of what you have learnt. Once you have finished your drawing you can press take a screenshot to see your image below! (you can take as many as you want). If you're stuck on what to draw, press the inpsire me button and hopefully you will feel more inspired!";
+   whatToDo.appendChild(paragraph);
+   isShowingRules = true;
+    }
 }

@@ -39,4 +39,18 @@ body {
     border: 1px solid black;
  }
 
+ h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+ }
+
+ h2 {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: lightgray;
+ }
+
  
