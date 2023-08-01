@@ -13,7 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "jquery": "^3.7.0",
+    "jquery.min.js": "^3.5.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
