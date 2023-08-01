@@ -1,7 +1,7 @@
 /* #aad3de colour of map*/
 
 body {
-    background-color: #aad3de;
+    background-color: white;
 }
 
 #map { 
@@ -27,7 +27,7 @@ nav, #container {
     border: 1px solid black;
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    color: red;
+    color: black;
     text-align: center;
 }
 
