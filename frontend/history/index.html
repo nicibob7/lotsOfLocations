@@ -8,103 +8,293 @@
     <script defer src="index.js"></script>
   </head>
   <body>
+    <!-- Header section containing the logo, navigation, and a home button -->
     <header>
-      <a href="/frontend/map"
-        ><img
-          class="logo"
-          src="https://w7.pngwing.com/pngs/285/815/png-transparent-computer-icons-geography-map-logo-silhouette-map.png"
-          alt="logo"
+      <a href="https://www.youtube.com/watch?v=oavMtUWDBTM"
+        ><img class="logo" src="img/lol.png" alt="logo"
       /></a>
       <nav>
         <ul class="nav_links">
-          <li><a href="/map/">Map</a></li>
-          <li><a href="/music/">Music</a></li>
-          <li><a href="/language/">Language</a></li>
-          <li><a href="/art/">Art</a></li>
+          <li><a href="/frontend/map/">Map</a></li>
+          <li><a href="/frontend/music/">Music</a></li>
+          <li><a href="/frontend/language/">Language</a></li>
+          <li><a href="/frontend/art/">Art</a></li>
         </ul>
       </nav>
-      <a class="home" href="/homepage/"><button>Home</button></a>
+      <a class="home" href="/frontend/homepage/"><button>Home</button></a>
     </header>
+
     <h1>Uruguay's History</h1>
+    <!-- Section containing columns with historical information -->
     <section class="columns">
-      <div class="column" onclick="flipColumn(1)">
-        <h2>Early 20th century</h2>
-        <ul>
-          <li>
-            The first half of the 20th century saw Uruguay as one of the most
-            prosperous nations in Latin America, known for its political
-            stability, social welfare programs, and progressive policies.
-          </li>
-          <li>
-            In 1903, the Colorado Party and the National Party established a
-            bipartisan system that dominated Uruguayan politics for decades.
-          </li>
-        </ul>
+      <div class="column">
+        <!-- Front of the column -->
+        <div class="front">
+          <h2>Early 20th century</h2>
+          <ul>
+            <li>
+              The first half of the 20th century saw Uruguay as one of the most
+              prosperous nations in Latin America, known for its political
+              stability, social welfare programs, and progressive policies.
+            </li>
+            <li>
+              In 1903, the Colorado Party and the National Party established a
+              bipartisan system that dominated Uruguayan politics for decades.
+            </li>
+          </ul>
+        </div>
+        <!-- Back of the column (flipped side) -->
+        <div class="back">
+          <!-- Multiple-choice options with radio buttons -->
+          <form id="quiz-form-1" class="question-form">
+            <div class="question" data-correct="1">
+              <p>
+                During the first half of the 20th century, Uruguay was known for
+                its prosperity and political stability due to:
+              </p>
+              <ul>
+                <li>
+                  <label>
+                    <input type="radio" name="q1" value="0" required /> a) A
+                    single-party system controlled by the Colorado Party
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q1" value="1" /> b) A bipartisan
+                    system established by the Colorado Party and the National
+                    Party
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q1" value="0" /> c) Social welfare
+                    programs initiated by the National Party
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q1" value="0" /> d) Progressive
+                    policies implemented by a coalition of parties
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <!-- Button to submit the quiz -->
+            <button type="button">Submit</button>
+          </form>
+        </div>
       </div>
-      <div class="column" onclick="flipColumn(2)">
-        <h2>Mid-20th century</h2>
-        <ul>
-          <li>
-            In the mid-20th century, Uruguay faced some political challenges,
-            including military interventions and economic fluctuations.
-          </li>
-          <li>
-            In the 1950s and 1960s, the country experienced a period of economic
-            growth and industrialization, known as the "Uruguayan miracle."
-          </li>
-          <li>
-            However, political repression and human rights violations increased
-            during the 1960s and 1970s as Uruguay faced the rise of leftist
-            guerrilla movements and growing tensions.
-          </li>
-        </ul>
+
+      <div class="column">
+        <div class="front">
+          <h2>Mid-20th century</h2>
+          <ul>
+            <li>
+              In the mid-20th century, Uruguay faced some political challenges,
+              including military interventions and economic fluctuations.
+            </li>
+            <li>
+              In the 1950s and 1960s, the country experienced a period of
+              economic growth and industrialization, known as the "Uruguayan
+              miracle".
+            </li>
+            <li>
+              However, political repression and human rights violations
+              increased during the 1960s and 1970s as Uruguay faced the rise of
+              leftist guerrilla movements and growing tensions.
+            </li>
+          </ul>
+        </div>
+
+        <div class="back">
+          <!-- Form 2 -->
+          <form id="quiz-form-2" class="question-form">
+            <div class="question" data-correct="1">
+              <p>
+                During the 1950s and 1960s, Uruguay experienced a period of
+                economic growth and industrialization, often referred to as the
+                "Uruguayan miracle". However, this era was also marked by:
+              </p>
+              <ul>
+                <li>
+                  <label>
+                    <input type="radio" name="q2" value="0" required /> a)
+                    Political stability and human rights advancements
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q2" value="1" /> b) Military
+                    interventions and economic fluctuations
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q2" value="0" /> c) A decline in
+                    industrial output and growth
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q2" value="0" /> c) Increasing
+                    political repression and human rights violations
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <button type="button">Submit</button>
+          </form>
+        </div>
       </div>
-      <div class="column" onclick="flipColumn(3)">
-        <h2>Late 20th century</h2>
-        <ul>
-          <li>
-            In 1973, a military coup took place, leading to the establishment of
-            a military dictatorship. This period, known as the "Dirty War,"
-            involved widespread human rights abuses, including torture and
-            forced disappearances.
-          </li>
-          <li>
-            The military dictatorship ruled until 1985 when Uruguay transitioned
-            back to democracy, marking the beginning of a new era of political
-            freedom and civil liberties.
-          </li>
-          <li>
-            In 1989, the left-leaning Frente Amplio (Broad Front) coalition was
-            formed, becoming a major political force in Uruguay.
-          </li>
-        </ul>
+
+      <div class="column">
+        <div class="front">
+          <h2>Late 20th century</h2>
+          <ul>
+            <li>
+              In 1973, a military coup took place, leading to the establishment
+              of a military dictatorship. This period, known as the "Dirty War,"
+              involved widespread human rights abuses, including torture and
+              forced disappearances.
+            </li>
+            <li>
+              The military dictatorship ruled until 1985 when Uruguay
+              transitioned back to democracy, marking the beginning of a new era
+              of political freedom and civil liberties.
+            </li>
+            <li>
+              In 1989, the left-leaning Frente Amplio (Broad Front) coalition
+              was formed, becoming a major political force in Uruguay.
+            </li>
+          </ul>
+        </div>
+
+        <div class="back">
+          <!-- Form 3 -->
+          <form id="quiz-form-3" class="question-form">
+            <div class="question" data-correct="1">
+              <p>
+                In 1973, Uruguay experienced a significant political shift when
+                a military dictatorship was established through a coup. This
+                period, known as the "Dirty War", was characterized by:
+              </p>
+              <ul>
+                <li>
+                  <label>
+                    <input type="radio" name="q3" value="0" required /> a)
+                    Economic growth and industrialization
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q3" value="0" /> b) Political
+                    freedom and civil liberties
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q3" value="1" /> c) Widespread
+                    human rights abuses, including torture and forced
+                    disappearances
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q3" value="0" /> c) Formation of
+                    the left-leaning Frente Amplio coalition
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <button type="button">Submit</button>
+          </form>
+        </div>
       </div>
-      <div class="column" onclick="flipColumn(4)">
-        <h2>21st century</h2>
-        <ul>
-          <li>
-            In the early 2000s, Uruguay faced economic challenges, including a
-            severe financial crisis. However, the country implemented various
-            reforms that contributed to its recovery.
-          </li>
-          <li>
-            During the 2010s, Uruguay continued to enjoy a relatively stable
-            political climate and social progress, including the legalization of
-            same-sex marriage (2013) and the decriminalization of abortion
-            (2012).
-          </li>
-          <li>
-            The country also pursued a progressive drug policy, legalizing the
-            production, sale, and consumption of marijuana in 2013, becoming the
-            first country in the world to do so.
-          </li>
-          <li>
-            In 2019, Luis Lacalle Pou, a member of the center-right National
-            Party, won the presidential election, ending 15 years of left-wing
-            rule under the Frente Amplio.
-          </li>
-        </ul>
+
+      <div class="column">
+        <div class="front">
+          <h2>21st century</h2>
+          <ul>
+            <li>
+              In the early 2000s, Uruguay faced economic challenges, including a
+              severe financial crisis. However, the country implemented various
+              reforms that contributed to its recovery.
+            </li>
+            <li>
+              During the 2010s, Uruguay continued to enjoy a relatively stable
+              political climate and social progress, including the legalization
+              of same-sex marriage (2013) and the decriminalization of abortion
+              (2012).
+            </li>
+            <li>
+              The country also pursued a progressive drug policy, legalizing the
+              production, sale, and consumption of marijuana in 2013, becoming
+              the first country in the world to do so.
+            </li>
+            <li>
+              In 2019, Luis Lacalle Pou, a member of the center-right National
+              Party, won the presidential election, ending 15 years of left-wing
+              rule under the Frente Amplio.
+            </li>
+          </ul>
+        </div>
+
+        <div class="back">
+          <!-- Form 4 -->
+          <form id="quiz-form-4" class="question-form">
+            <div class="question" data-correct="1">
+              <p>
+                In the 2010s, Uruguay achieved social progress and made history
+                by becoming the first country to do what regarding marijuana?
+              </p>
+              <ul>
+                <li>
+                  <label>
+                    <input type="radio" name="q4" value="0" required /> a) Fully
+                    legalized all drugs, including hard drugs like cocaine and
+                    heroin.
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q4" value="0" /> b) Decriminalized
+                    the possession of small amounts of marijuana for personal
+                    use.
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q4" value="0" /> c) Established
+                    strict prohibition laws for all drugs, including marijuana.
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="q4" value="1" /> c) Legalized the
+                    production, sale, and consumption of marijuana.
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <button type="button">Submit</button>
+          </form>
+        </div>
       </div>
     </section>
+
+    <div id="result"></div>
   </body>
 </html>
