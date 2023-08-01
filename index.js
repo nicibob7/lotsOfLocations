@@ -14,6 +14,7 @@ app.use('/music', express.static('frontend/music'));
 app.use('/language', express.static('frontend/language'));
 app.use('/history', express.static('frontend/history'));
 app.use('/map', express.static('frontend/map'));
+app.use('/art', express.static('frontend/art'));
 
 // app.use(express.static('/frontend/history/history.html'));
 // app.use(express.static('/frontend/music/music.html'));

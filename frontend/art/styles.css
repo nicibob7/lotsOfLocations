@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    display: block;
+    justify-content: center;
+  align-items: center;
+  height: 100vh;
+  }
+
+  #drawing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+
+  #drawing {
+    text-align: center;
+    width: 600px;
+    height: 600px;
+      border: 2px solid black;
+  }
+
+  #centerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+ #imageGallery {
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: vh;
+    border: 1px solid black;
+ }
+
+ 
