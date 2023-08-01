@@ -51,9 +51,6 @@ app.get('/map', (req, res) => {
     res.send('/map.index.html')
 })
 
-
-
-
 app.listen(port, () => {
     console.log(`API listening on port ${port}.`);
 })
