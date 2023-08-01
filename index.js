@@ -15,12 +15,9 @@ app.use('/music', express.static('frontend/music'));
 app.use('/language', express.static('frontend/language'));
 app.use('/history', express.static('frontend/history'));
 app.use('/countryhomepage', express.static('frontend/countryhomepage'));
-<<<<<<< HEAD
-=======
 app.use('/map', express.static('frontend/map'));
 app.use('/upload', express.static('frontend/art/gallery'))
 
->>>>>>> 1362295a595369f4696f0a330850a6d6a9c9d40c
 
 // app.use(express.static('/frontend/history/history.html'));
 // app.use(express.static('/frontend/music/music.html'));
@@ -49,8 +46,6 @@ app.get('/language', (req, res) => {
 app.get('/countryhomepage', (req, res) => {
     res.send('/countryhomepage.index.html')
 })
-<<<<<<< HEAD
-=======
 
 app.get('/map', (req, res) => {
     res.send('/map.index.html')
@@ -58,7 +53,6 @@ app.get('/map', (req, res) => {
 
 
 
->>>>>>> 1362295a595369f4696f0a330850a6d6a9c9d40c
 
 app.listen(port, () => {
     console.log(`API listening on port ${port}.`);
