@@ -8,7 +8,7 @@
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
     
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
  crossorigin=""></script>
  <script defer src="/frontend/map/index.js"></script>
@@ -18,20 +18,26 @@
 <body>
     <nav>
     <h1>GUESS THE LOCATION</h1>
+    <h1><a href="#">Back to home page</a></h1>
     </nav>
 
-    <div id="container">
-        <h2>HOW TO PLAY</h2>
-     
+    <div class="container" id="container">
+        <h2>HOW TO PLAY</h2> 
+        
     </div>
 
+   
+
     <div id="map"></div>
+
+    
     <div class="popup-content">
-        <p>GUESS THE COUNTRY, YOU HAVE TWO GUESSES:</p>
+        <p>What country is this?</p>
         <label for="answer">Your guess:</label>
         <input type="text" id="answer" name="answer" placeholder="eg Italy...">
         <button id="submitAnswer">Submit guess</button>
       </div>
+
   
  
 </body>

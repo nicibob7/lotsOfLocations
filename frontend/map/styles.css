@@ -1,23 +1,37 @@
 /* #aad3de colour of map*/
 
 body {
-    background-color: #aad3de;
+    background-color:  black;
 }
 
 #map { 
     height: 600px;
-    width: calc(100% - 160px); 
+    width: calc(100% - 200px); 
     margin: 20px auto; 
+    border-radius: 80px;
    
+}
+
+.popup-content {
+    text-align: center;
+  
+}
+
+#submitAnswer {
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
 }
 
 nav, #container {
     margin-top: 40px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    color: red;
+    color: black;
     text-align: center;
+    cursor: pointer;
+    background-color: #aad3de;
 }
 
 nav {
@@ -29,8 +43,10 @@ nav {
     margin-left: 50px;
 }
 
-.marker {
-background-color: aqua;
-color: white;
-}
 
+
+.marker {
+background-color: white;
+color: black;
+
+}
