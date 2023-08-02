@@ -1,8 +1,10 @@
-const url = "/weather"; 
+const url = "http://api.weatherstack.com/current"; 
+const apiKey = process.env.API_KEY;
+const query = 'Montevideo';
 
 async function getWeather() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(`${url}?access_key=${apiKey}&query=${query}`);
         const weatherData = await response.json();
         return weatherData;
     } catch (err) {
