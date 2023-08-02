@@ -1,6 +1,8 @@
-const url = "http://api.weatherstack.com/current"; 
+const url = "/weather"; 
 const apiKey = process.env.API_KEY;
 const query = 'Montevideo';
+const fetch = import('node-fetch');
+
 
 async function getWeather() {
     try {
@@ -9,7 +11,7 @@ async function getWeather() {
         return weatherData;
     } catch (err) {
         console.log("Error fetching weather data:", err);
-        return null;
+        throw err
     }
 }
 

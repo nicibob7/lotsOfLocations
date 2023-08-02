@@ -1,5 +1,5 @@
 require("dotenv").configDotenv();
-const fetch = import('node-fetch'); // Make sure to import the fetch library
+const fetch = import('node-fetch'); 
 const express = require('express');
 const cors = require('cors');
 const port = process.env.PORT;
@@ -29,10 +29,8 @@ app.use('/history', express.static('frontend/history'));
 app.use('/countryhomepage', express.static('frontend/countryhomepage'));
 app.use('/map', express.static('frontend/map'));
 app.use('/upload', express.static('frontend/art/gallery'))
+app.use('/weather', express.static('frontend/weather'));
 
-// app.use(express.static('/frontend/history/history.html'));
-// app.use(express.static('/frontend/music/music.html'));
-// app.use(express.static('/frontend/language/language.html'));
 
 app.get('/', (req, res) => {
     res.send('frontend/index.html')
@@ -68,7 +66,7 @@ app.get('/map', (req, res) => {
 
 
 
-app.use( async (req, res) => {
+app.use( '/weather',  async (req, res) => {
     try {
         const response = await fetch(`${url}?access_key=${apiKey}&query=${query}`);
         if (response.ok) {
