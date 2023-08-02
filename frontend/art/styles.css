@@ -17,7 +17,7 @@ body {
   #drawing {
     text-align: center;
     width: 600px;
-    height: 600px;
+    height: 612px;
       border: 2px solid black;
   }
 
@@ -53,4 +53,23 @@ body {
     background-color: lightgray;
  }
 
+ img {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+ }
  
+#imageBox {
+  text-align: center;
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+button {
+margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

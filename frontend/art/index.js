@@ -15,6 +15,8 @@ const strokeSizeLabel = document.querySelector('#strokeSizeLabel');
 const eraseButton = document.querySelector('#eraseDrawing');
 const takeScreenshotButton = document.querySelector('#takeScreenshot')
 const imageGallery = document.querySelector('#imageGallery')
+const inspireMeButton = document.querySelector('#inspire')
+const imageBox = document.querySelector('#imageBox')
 
 changeColorButton.addEventListener('click', changeColor);
 
@@ -25,6 +27,11 @@ strokeSizeSlider.addEventListener('input', updateStrokeSize);
 eraseButton.addEventListener('click', eraseDrawing)
 
 takeScreenshotButton.addEventListener('click', takeScreenshot)
+
+inspireMeButton.addEventListener('click', function() {
+  const isVisible = imageBox.style.display === 'block';
+  imageBox.style.display = isVisible ? 'none' : 'block';
+})
 
 function takeScreenshot() {
     const canvas = document.querySelector('canvas')
@@ -91,8 +98,14 @@ function toggleRules() {
         isShowingRules = false;
     } else {
         const paragraph = document.createElement('p');
-    paragraph.textContent = "Here is a space to be able to draw your thoughts and feelings of what you have learnt. Once you have finished your drawing you can press take a screenshot to see your image below! (you can take as many as you want). If you're stuck on what to draw, press the inpsire me button and hopefully you will feel more inspired!";
+    paragraph.textContent = "Here, you have the unique opportunity to express and visualise your newfound knowledge by drawing your impressions and learnings about this beautiful country. Get creative and use our drawing tool to depict the landscapes, culture, and iconic landmarks of Uruguay. Additionally, you can take inspiration from a collection of captivating Uruguayan artworks showcased on the page by pressing the inspire me button. Let your imagination flow, and once you're satisfied with your artwork, simply press the 'Take a Screenshot' button to save and admire your creation. So, immerse yourself in the rich heritage of Uruguay and let your drawings tell the story of your discoveries! If you want to make multiple artworks, press take a screenshot and see your gallery build up below!";
    whatToDo.appendChild(paragraph);
    isShowingRules = true;
     }
+}
+
+function showImages() {
+  const imageOne = document.createElement('img');
+  imageOne.src = ''
+
 }
