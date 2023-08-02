@@ -73,8 +73,7 @@ app.get('/weather', async (req, res) => {
             res.sendStatus(404);
         }
     } catch (err) {
-        console.log('Error fetching weather data:', err);
-        res.sendStatus(500);
+        console.log(err);
     }
 });
 
