@@ -74,7 +74,7 @@ const questions = [
       labelElement.remove();
       answer.remove();
       submitAnswer.addEventListener('click', function () {
-        window.location.href = 'https://www.bbc.com';
+        window.location.href = '/countryhomepage';
       });
 
         }
