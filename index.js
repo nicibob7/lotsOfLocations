@@ -22,7 +22,7 @@ app.use('/history', express.static('frontend/history'));
 app.use('/countryhomepage', express.static('frontend/countryhomepage'));
 app.use('/map', express.static('frontend/map'));
 app.use('/upload', express.static('frontend/art/gallery'))
-//app.use('/weather', express.static('frontend/countryhomepage/weather'))
+app.use('/weather', express.static('frontend/weather'))
 
 
 // app.use(express.static('/frontend/history/history.html'));
