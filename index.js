@@ -13,6 +13,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use(cors({
+    origin: 'https://lots-of-locations-lol.onrender.com', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+  }));
+
 // app.use(express.static('frontend'));
 app.use(express.static('frontend/homepage'));
 app.use('/art', express.static('frontend/art'));
