@@ -18,6 +18,7 @@ const howToPlay = document.querySelector('#container')
 let isShowingRules = false;
 
 
+
 const questions = [
     {
       question: "What country is this?",
