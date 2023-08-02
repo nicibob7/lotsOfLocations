@@ -12,15 +12,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
+    "bootstrap": "^5.3.1",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-
-
-    "jquery": "^3.7.0",
-    "jquery.min.js": "^3.5.1"
-
+    "fetch": "^1.1.0",
+    "jest": "^29.6.2",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
     "nodemon": "^3.0.1"
   }
 }
