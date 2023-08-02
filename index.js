@@ -14,8 +14,10 @@ app.use('/art', express.static('frontend/art'));
 app.use('/music', express.static('frontend/music'));
 app.use('/language', express.static('frontend/language'));
 app.use('/history', express.static('frontend/history'));
+app.use('/countryhomepage', express.static('frontend/countryhomepage'));
 app.use('/map', express.static('frontend/map'));
 app.use('/upload', express.static('frontend/art/gallery'))
+
 
 // app.use(express.static('/frontend/history/history.html'));
 // app.use(express.static('/frontend/music/music.html'));
@@ -41,8 +43,8 @@ app.get('/language', (req, res) => {
     res.send('/language.index.html')
 })
 
-app.get('/history', (req, res) => {
-    res.send('/history.index.html')
+app.get('/countryhomepage', (req, res) => {
+    res.send('/countryhomepage.index.html')
 })
 
 app.get('/map', (req, res) => {

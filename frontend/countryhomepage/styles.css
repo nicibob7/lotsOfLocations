@@ -1,0 +1,9 @@
+
+.logo{
+    max-width: 70px;
+    max-height: auto;
+}
+
+.card-group{
+    display: flex;
+}
