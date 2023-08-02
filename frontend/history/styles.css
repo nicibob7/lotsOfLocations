@@ -22,10 +22,27 @@
 
 .nav_links li a {
   transition: all 0.3s ease 0s;
+  position: relative;
 }
 
 .nav_links li a:hover {
   color: #0088a9;
+}
+
+.nav_links li a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust as needed */
+  width: 100%;
+  height: 2px; /* thickness */
+  background-color: #0088a9;
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: center bottom; /* Origin at left bottom */
+  transition: transform 0.5s ease;
+}
+
+.nav_links li a:hover::before {
+  transform: scaleX(1); /* Show underline on hover */
 }
 
 button {
@@ -55,7 +72,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  padding: 5px 10%;
 }
 
 h1 {
