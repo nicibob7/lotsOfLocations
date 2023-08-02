@@ -1,7 +1,5 @@
 const url = "/weather"; 
-const apiKey = process.env.API_KEY;
-const query = 'Montevideo';
-const fetch = import('node-fetch');
+const fetch = require('node-fetch');
 
 
 async function getWeather() {
