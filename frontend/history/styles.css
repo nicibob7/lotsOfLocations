@@ -148,13 +148,19 @@ h2 {
   transform: rotateY(0);
 }
 
+.column.flipped .back .answer {
+  border-bottom: 3px solid rgba(0, 136, 169, 1);
+  padding: 7px;
+  margin: 2px;
+}
+
+.column.flipped .back h1 {
+  border-bottom: 3px solid rgba(0, 136, 169, 1);
+}
+
 img {
   object-fit: cover;
   max-width: 100%;
-}
-
-.back ul {
-  list-style: none;
 }
 
 .back ul li {
