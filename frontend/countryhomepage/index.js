@@ -1,5 +1,5 @@
 const url = "/weather"; 
-const fetch = require('node-fetch');
+
 
 
 async function getWeather() {

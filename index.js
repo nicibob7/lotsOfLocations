@@ -1,5 +1,4 @@
 require("dotenv").config();
-const fetch = require('node-fetch'); 
 const express = require('express');
 const cors = require('cors');
 const port = process.env.PORT;
@@ -9,6 +8,7 @@ const query = 'Montevideo';
 const url = 'http://api.weatherstack.com/current';
 const countries = require('./countries.json')
 
+import fetch from 'node-fetch';
 
 const app = express();
 app.use(cors());
