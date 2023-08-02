@@ -1,14 +1,16 @@
 /* #aad3de colour of map*/
+.leaflet-control-container { position: absolute; right: 315px } 
 
 body {
+    font-family: monospace;
     background-color:  black;
 }
 
 #map { 
-    height: 600px;
+    height: 700px;
     width: calc(100% - 200px); 
     margin: 20px auto; 
-    border-radius: 80px;
+    border-radius: 400px;
    
 }
 
@@ -19,28 +21,31 @@ body {
 
 #submitAnswer {
     margin-top: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: monospace;
     border-radius: 10px;
 }
 
 nav, #container {
     margin-top: 40px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    font-family: monospace;
+    color: white;
     text-align: center;
     cursor: pointer;
-    background-color: #aad3de;
+    background-color: black;
 }
 
 nav {
-    margin-left: 50px ;
+    text-align: center;
+    
+    margin-bottom: 100px;
 }
 
 #container {
     margin-top: 10px;
     margin-left: 50px;
+    border: 1px solid white;
 }
 
 

@@ -13,7 +13,6 @@
 
 .nav_links {
   list-style: none;
-  background-color: #edf0f1;
 }
 
 .nav_links li {
@@ -23,10 +22,27 @@
 
 .nav_links li a {
   transition: all 0.3s ease 0s;
+  position: relative;
 }
 
 .nav_links li a:hover {
   color: #0088a9;
+}
+
+.nav_links li a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust as needed */
+  width: 100%;
+  height: 2px; /* thickness */
+  background-color: #0088a9;
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: center bottom; /* Origin at left bottom */
+  transition: transform 0.5s ease;
+}
+
+.nav_links li a:hover::before {
+  transform: scaleX(1); /* Show underline on hover */
 }
 
 button {
@@ -56,7 +72,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  padding: 5px 10%;
 }
 
 h1 {
@@ -68,7 +84,8 @@ h1 {
 }
 
 h2 {
-  padding-bottom: 20px;
+  padding-bottom: 0px;
+  text-align: center;
 }
 
 .columns {
@@ -85,13 +102,79 @@ h2 {
 
 .column {
   flex: 1;
-  border: 1px solid;
-  margin: 2px;
+  margin: 20px;
   padding: 20px;
   transition: 1s;
+  position: relative; /*Creates stacking context*/
 }
 
-.column.flipped {
+.front,
+.back {
+  /*Common styles for both sides*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Prevent flickering during flip */
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.front li {
+  padding: 10px;
+  list-style: none;
+}
+
+.front ul {
+  border-top: 3px solid rgba(0, 136, 169, 1);
+}
+
+.front {
+  z-index: 2; /*Ensures the front is on the top*/
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.column.flipped .front {
   cursor: pointer;
   transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.column.flipped .back {
+  transform: rotateY(0);
+}
+
+.column.flipped .back .answer {
+  border-bottom: 3px solid rgba(0, 136, 169, 1);
+  padding: 7px;
+  margin: 2px;
+}
+
+.column.flipped .back h1 {
+  border-bottom: 3px solid rgba(0, 136, 169, 1);
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.back ul li {
+  margin: 1rem;
+}
+
+.back ul li label {
+  cursor: pointer;
+}
+
+#result {
+  font-size: 22px;
+  color: #edf0f1;
+  position: absolute;
+  background-color: rgba(0, 136, 169, 1);
+  border-radius: 5px;
 }

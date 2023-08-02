@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOL - Uruguay's Music</title>
-    <link rel="stylesheet" href="">
-    <script src="" defer></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script defer src="index.js"></script>
 </head>
 <body>
 <header>
-    <nav>
-        
-    </nav>
+    <!-- <a href="/frontend/map">
+    <img
+      class="logo"
+      src="https://w7.pngwing.com/pngs/285/815/png-transparent-computer-icons-geography-map-logo-silhouette-map.png"
+      alt="logo"
+  /></a> -->
+  <nav>
+    <ul class="nav_links">
+      <li><a href="/map/">Map</a></li>
+      <li><a href="/music/">Music</a></li>
+      <li><a href="/language/">Language</a></li>
+      <li><a href="/art/">Art</a></li>
+    </ul>
+  </nav>
+  <a class="home" href="/homepage/"><button>Home</button></a>
 </header>
     
 </body>
@@ -19,7 +31,8 @@
 <h2>Uruguay has a rich musical heritage that spans various genres and styles. 
  Traditional Uruguayan music is deeply influenced by European, African, and indigenous cultures.
 </h2>
-<section>
+<section class="columns">
+<div class="column">
  <ol>
     Here are some of the prominent genres and artists in Uruguay's music scene:
     <li>Candombe: Candombe is a traditional music and dance genre that 
@@ -51,8 +64,8 @@
           African roots. It is characterized by its 
           rhythmic style and often features romantic themes.</li>
  </ol>
-</section>
-<section>
+</div>
+<div class = "column">
  <ul>
     Prominent Uruguayan musicians and bands include:
     <li>Jorge Drexler: A Grammy-winning 
@@ -76,11 +89,41 @@
         its energetic performances and social 
         commentary in their lyrics.</li>
  </ul>
+</div>
+</section>
+<section class="columns">
+    <audio class="column" controls>
+        <source src="https://www2.cs.uic.edu/~i101/SoundFiles/ImperialMarch60.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio class="column" controls>
+        <source src="https://www2.cs.uic.edu/~i101/SoundFiles/CantinaBand60.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+</section>
+<section>
+    <form id="musicForm">
+        <label for="musicQuiz1">What is the most popular genre in Uruguay?</label>
+            <input id="musicQuiz1" type="text" name="musicQuiz1" placeholder="Answer">
+        <label for="musicQuiz2">What is the capital city of Uruguay?</label>    
+            <input id="musicQuiz2" type="text" name="musicQuiz2" placeholder="Answer">
+        <label for="musicQuiz3">What is the capital city of Uruguay?</label>    
+            <input id="musicQuiz3" type="text" name="musicQuiz3" placeholder="Answer">
+        <label for="musicQuiz4">What is the capital city of Uruguay?</label>    
+            <input id="musicQuiz4" type="text" name="musicQuiz4" placeholder="Answer">
+        <label for="musicQuiz5">What is the capital city of Uruguay?</label>    
+            <input id="musicQuiz5" type="text" name="musicQuiz5" placeholder="Answer">
+            <input type="submit" value ="Check">
+            <!-- <input type="submit" value ="Check"> -->
+    </form>
+    <p id="answer"></p>
 </section>
 <section>
  <p>These are just a few examples of the diverse
      musical landscape in Uruguay. The country's
       music reflects its multicultural history
        and the creative spirit of its people.</p>
+
 </section>
 </html>

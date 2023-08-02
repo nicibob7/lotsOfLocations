@@ -1,0 +1,30 @@
+.logo {
+    max-width: 80px;
+    max-height: auto;
+}
+
+
+.audio-player {
+    --player-button-width: 3em;
+    --sound-button-width: 2em;
+    width: 15rem;
+    height: 15rem;
+  }
+  
+
+  
+  .player-button1,
+  .player-button2,
+  .player-button3,
+  .player-button4,
+  .player-button5{
+    background-color: transparent;
+    border: 0;
+    width: var(--player-button-width);
+    height: var(--player-button-width);
+    cursor: pointer;
+  }
+  
+
+  
+
