@@ -1,11 +1,7 @@
 require("dotenv").config();
 const express = require('express');
 const cors = require('cors');
-const port = process.env.PORT;
-const apiKey = process.env.API_KEY;
-//const port = 3000;
-const query = 'Montevideo';
-const url = 'http://api.weatherstack.com/current';
+
 const countries = require('./countries.json')
 const images = require('./images')
 
