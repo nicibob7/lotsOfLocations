@@ -17,6 +17,8 @@ const takeScreenshotButton = document.querySelector('#takeScreenshot')
 const imageGallery = document.querySelector('#imageGallery')
 const inspireMeButton = document.querySelector('#inspire')
 const imageBox = document.querySelector('#imageBox')
+const imageElement = document.querySelector('#imageElement')
+const imageDescription = document.querySelector('#imageDescription')
 
 changeColorButton.addEventListener('click', changeColor);
 
@@ -28,10 +30,7 @@ eraseButton.addEventListener('click', eraseDrawing)
 
 takeScreenshotButton.addEventListener('click', takeScreenshot)
 
-inspireMeButton.addEventListener('click', function() {
-  const isVisible = imageBox.style.display === 'block';
-  imageBox.style.display = isVisible ? 'none' : 'block';
-})
+
 
 function takeScreenshot() {
     const canvas = document.querySelector('canvas')
@@ -104,8 +103,30 @@ function toggleRules() {
     }
 }
 
-function showImages() {
-  const imageOne = document.createElement('img');
-  imageOne.src = ''
-
+async function getRandomImage() {
+  try {
+    const response = await fetch('http://localhost:3000/getRandomImage');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log('There has been an error loading the image');
+    return null;
+  }
 }
+
+async function showRandomImage() {
+  
+   const isVisible = imageBox.style.display === 'block';
+   imageBox.style.display = isVisible ? 'none' : 'block';
+
+  const randomImage = await getRandomImage();
+  if (randomImage) {
+    imageElement.src = randomImage.imageUrl;
+    imageDescription.textContent = randomImage.description;
+  }
+}
+
+inspireMeButton.addEventListener('click', showRandomImage);
+
+
+

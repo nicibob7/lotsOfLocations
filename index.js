@@ -7,6 +7,7 @@ const apiKey = process.env.API_KEY;
 const query = 'Montevideo';
 const url = 'http://api.weatherstack.com/current';
 const countries = require('./countries.json')
+const images = require('./images')
 
 import fetch from 'node-fetch';
 
@@ -28,8 +29,12 @@ app.use('/language', express.static('frontend/language'));
 app.use('/history', express.static('frontend/history'));
 app.use('/countryhomepage', express.static('frontend/countryhomepage'));
 app.use('/map', express.static('frontend/map'));
-app.use('/upload', express.static('frontend/art/gallery'))
-app.use('/weather', express.static('frontend/weather'));
+
+
+app.use(express.static('images'));
+
+
+
 
 
 app.get('/', (req, res) => {
@@ -43,6 +48,7 @@ app.get('/countriesData', (req, res) => {
 app.get('/art', (req, res) => {
     res.send('/art.index.html')
 })
+
 
 app.get('/music', (req, res) => {
     fetch("https://api.spotify.com")
@@ -62,6 +68,12 @@ app.get('/countryhomepage', (req, res) => {
 
 app.get('/map', (req, res) => {
     res.send('/map.index.html')
+})
+
+app.get('/getRandomImage', (req, res) => {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const randomImage = images[randomIndex];
+    res.json(randomImage);
 })
 
 
