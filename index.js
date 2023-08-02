@@ -1,5 +1,5 @@
 require("dotenv").configDotenv();
-const fetch = require('node-fetch'); // Make sure to import the fetch library
+const fetch = import('node-fetch'); // Make sure to import the fetch library
 const express = require('express');
 const cors = require('cors');
 const port = process.env.PORT;
