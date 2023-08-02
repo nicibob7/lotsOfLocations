@@ -1,26 +1,61 @@
 const musicForm = document.querySelector("#musicForm")
+let arr = []
 
 // const express = require('express')
 // const cors = require('cors');
 // app.use(cors());
 
-function myFunction(e){
-    console.log(e)
-    console.log(e.event)
-    fetch("https://api.spotify.com")
-    .catch((err) => {
-        console.log('rejected', err)
-    })
+musicForm.addEventListener("submit", getAnswer1)
+musicForm.addEventListener("submit", getAnswer2)
+musicForm.addEventListener("submit", getAnswer3)
+musicForm.addEventListener("submit", getAnswer4)
+musicForm.addEventListener("submit", getAnswer5)
+
+function getAnswer1(e){
+    e.preventDefault()
+    console.log(e.target.musicQuiz1.value)
+    const answer1 = e.target.musicQuiz1.value
+    arr[arr.length] = answer1
+    console.log(arr)
+    e.target.musicQuiz1.value = ""
+    
 }
 
-musicForm.addEventListener("submit", getAnswer)
-
-function getAnswer(e){
+function getAnswer2(e){
     e.preventDefault()
-    console.log(e.target.musicQuiz.value)
-    const answer = e.target.musicQuiz.value
-    checkAnswer(answer)
-    e.target.musicQuiz.value = ""
+    console.log(e.target.musicQuiz2.value)
+    const answer2 = e.target.musicQuiz2.value
+    arr[arr.length] = answer2
+    console.log(arr)
+    e.target.musicQuiz2.value = ""
+}
+
+function getAnswer3(e){
+    e.preventDefault()
+    console.log(e.target.musicQuiz3.value)
+    const answer3 = e.target.musicQuiz3.value
+    arr[arr.length] = answer3
+    console.log(arr)
+    e.target.musicQuiz3.value = ""
+}
+
+function getAnswer4(e){
+    e.preventDefault()
+    console.log(e.target.musicQuiz4.value)
+    const answer4 = e.target.musicQuiz4.value
+    arr[arr.length] = answer4
+    console.log(arr)
+    e.target.musicQuiz4.value = ""
+}
+
+function getAnswer5(e){
+    e.preventDefault()
+    console.log(e.target.musicQuiz5.value)
+    const answer5 = e.target.musicQuiz5.value
+    arr[arr.length] = answer5
+    console.log(arr)
+    checkAnswer(arr)
+    e.target.musicQuiz5.value = ""
 }
 
 function checkAnswer(value){
@@ -33,19 +68,25 @@ function checkAnswer(value){
     return data[0]
 }).then(data => {
     console.log(data)
-    return data["quiz_answers"]
+    return data.quiz_answers
 }).then(data => {
+    for(let i = 0; i < arr.length; i++){
+        arr[i] = arr[i].toLowerCase()
+        data[i] = data[i].toLowerCase()
+    }
+    console.log(arr)
     console.log(data)
-    if(value.toLowerCase() === data[0].toLowerCase()){
-        console.log(`Yay!`)
-        document.querySelector("#answer").textContent = `CORRECT!`
+    let counter = 0
+    for(let i = 0; i < data.length; i++){
+        if(arr[i] === data[i]){
+            console.log(`Yay`)
+            counter++
+        }
+        console.log(counter)
     }
-    else if(value){
-        document.querySelector("#answer").textContent = `INCORRECT!`
-    }
-    else{
-        document.querySelector("#answer").textContent = `PLEASE ENTER AN ANSWER!`
-    }
+    document.querySelector("#answer").textContent = `You scored ${counter}/${data.length}`
+    arr = []
+    console.log(arr)
 })
     .catch((err) => console.log(`Unable to retrieve data`))
 }

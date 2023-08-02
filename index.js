@@ -1,6 +1,9 @@
+require("dotenv").configDotenv();
 const express = require('express');
 const cors = require('cors');
-const port = 3000;
+const port = process.env.PORT;
+const apiKey = process.env.API_KEY;
+//const port = 3000;
 const countries = require('./countries.json')
 
 
@@ -58,5 +61,4 @@ app.get('/map', (req, res) => {
 app.listen(port, () => {
     console.log(`API listening on port ${port}.`);
 })
-
 

@@ -1,4 +1,4 @@
-// const steps = require('./questions')
+
 let map = L.map('map').setView([10.505, 1], 2);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 2, //max zoom initially 2 - cannot zoom in to see names of place //set back to tqo so you cannot see the name 
@@ -16,6 +16,7 @@ const submitAnswer = document.querySelector('#submitAnswer');
 const marker = L.marker([-32.33, -55.48]).addTo(map);
 const howToPlay = document.querySelector('#container')
 let isShowingRules = false;
+
 
 
 const questions = [
@@ -43,6 +44,8 @@ const questions = [
 
   let currentQuestionIndex = 0;
   let consecutiveWrongAnswers = 0;
+  
+
 
 
 
@@ -54,30 +57,44 @@ const questions = [
         } 
     }
   
-
-
   submitAnswer.addEventListener('click', function (e) {
     e.preventDefault();
     const answerInput = answer.value.toLowerCase();
     if (answerInput === questions[currentQuestionIndex].correctAnswer) {
         console.log(answerInput);
         answer.value = '';
+        
+        consecutiveWrongAnswers = 0;
 
         if (currentQuestionIndex < questions.length - 1) {
             alert('Correct! Now try the next one');
+            
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',  {
+                maxZoom: 4,
+                minZoom: 2,
+            }).addTo(map);
         } else {
             alert('All the questions have been answered, now time to learn about Uruguay!');
+            
       question.textContent = questions[currentQuestionIndex - 1].nextQuestion;
       submitAnswer.style.fontSize = '50px';
       submitAnswer.textContent = 'PRESS HERE';
       const labelElement = document.querySelector("label[for='answer']");
       labelElement.remove();
       answer.remove();
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',  {
+                maxZoom: 19,
+               
+            }).addTo(map);
+      currentZoomLevel = map.getZoom();
+         map.setZoom(currentZoomLevel + 8);
       submitAnswer.addEventListener('click', function () {
-        window.location.href = 'https://www.bbc.com';
+        window.location.href = '/countryhomepage';
       });
 
         }
+         
+        map.setView([-30, -55], 4);
         moveToNextQuestion();
         consecutiveWrongAnswers = 0;
         
@@ -116,35 +133,5 @@ const questions = [
 
 
 
-
-
-
-//function to get the questions from our data to then show on the screen
-async function getQuestions() {
-    try {
-        const reponse = await fetch(apiUrl);
-        if (repsonse.ok) {
-            answers = await response.json();
-        } else {
-            throw("failed to get quotes")
-        }
-    } catch (e) {
-        console.log(e)
-    }
-}
-
-//function that will retrieve the answers from our data
-async function getAnswers() {
-    try {
-        const reponse = await fetch(apiUrl);
-        if (repsonse.ok) {
-            answers = await response.json();
-        } else {
-            throw("failed to get quotes")
-        }
-    } catch (e) {
-        console.log(e)
-    }
-}
 
 
