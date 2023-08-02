@@ -31,6 +31,10 @@ app.get('/art', (req, res) => {
 })
 
 app.get('/music', (req, res) => {
+    fetch("https://api.spotify.com")
+    .catch((err) => {
+        console.log('rejected', err)
+    })
     res.send('/music.index.html')
 })
 
