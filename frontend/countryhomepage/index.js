@@ -1,5 +1,4 @@
-
-const url = "https://lots-of-locations-lol.onrender.com/weather"; // Replace with your backend API URL
+const url = "/weather"; 
 
 async function getWeather() {
     try {
@@ -17,17 +16,22 @@ async function displayWeather() {
     const weatherData = await getWeather();
 
     if (weatherData) {
+        const country = weatherData.location.country;
         const location = weatherData.location.name;
         const temperature = weatherData.current.temperature;
-        const weatherDescription = weatherData.current.weather_descriptions[0];
+        const weatherDescription = weatherData.current.weather_descriptions[0].toLowerCase();
         const weatherIcon = weatherData.current.weather_icons[0];
+        const localTime = weatherData.location.localtime;
 
         // Create elements
         const weatherInfoParagraph = document.createElement("p");
         const weatherIconImage = document.createElement("img");
+        const timeInfoParagraph = document.createElement("p");
 
         // Set text content and attributes
-        weatherInfoParagraph.textContent = `The current temperature in ${location} is ${temperature}℃, and the weather is ${weatherDescription}.`;
+        weatherInfoParagraph.textContent = `The current temperature in ${location}, ${country} is ${temperature}℃, and the weather is ${weatherDescription}!`;
+       timeInfoParagraph.textContent = `The local time in  ${location} is ${localTime}.`
+
         weatherIconImage.src = weatherIcon;
         weatherIconImage.alt = "Weather Icon";
 
@@ -40,8 +44,9 @@ async function displayWeather() {
         
         weatherSection.appendChild(weatherInfoParagraph);
         weatherSection.appendChild(weatherIconImage);
+        weatherSection.appendChild(timeInfoParagraph);
     } else {
-        weatherSection.textContent = "Failed to fetch weather data.";
+        weatherSection.textContent = "Failed to fetch display weather data.";
     }
 }
 
