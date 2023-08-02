@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const port = 3000;
-const countries = require('./countries.json')
+//const countries = require('./countries.json')
 const images = require('./images')
 
 

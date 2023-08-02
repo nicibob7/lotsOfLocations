@@ -44,6 +44,7 @@ function displayScreenshot(imageURL) {
     screenshotDiv.classList.add('screenshot');
     const screenShotImage = document.createElement('img');
     screenShotImage.src = imageURL;
+ 
     screenShotImage.width = 200; 
     screenShotImage.height = 200;
     imageGallery.appendChild(screenshotDiv);
@@ -118,7 +119,7 @@ async function showRandomImage() {
   
    const isVisible = imageBox.style.display === 'block';
    imageBox.style.display = isVisible ? 'none' : 'block';
-
+// })
   const randomImage = await getRandomImage();
   if (randomImage) {
     imageElement.src = randomImage.imageUrl;
