@@ -76,8 +76,9 @@ app.get('/weather', async (req, res) => {
         } else {
             res.sendStatus(404);
         }
-    } catch (err) {
-        console.log(err);
+    } catch (error) {
+        console.log(error);
+        res.sendStatus(404)
     }
 });
 
