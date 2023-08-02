@@ -6,7 +6,7 @@ const fetch = import('node-fetch');
 
 async function getWeather() {
     try {
-        const response = await fetch(`${url}?access_key=${apiKey}&query=${query}`);
+        const response = await fetch(url);
         const weatherData = await response.json();
         return weatherData;
     } catch (err) {
