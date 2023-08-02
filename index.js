@@ -1,4 +1,5 @@
 require("dotenv").configDotenv();
+const fetch = require('node-fetch'); // Make sure to import the fetch library
 const express = require('express');
 const cors = require('cors');
 const port = process.env.PORT;
@@ -67,7 +68,7 @@ app.get('/map', (req, res) => {
 
 
 
-app.get('/weather', async (req, res) => {
+app.use( async (req, res) => {
     try {
         const response = await fetch(`${url}?access_key=${apiKey}&query=${query}`);
         if (response.ok) {
@@ -76,12 +77,11 @@ app.get('/weather', async (req, res) => {
         } else {
             res.sendStatus(404);
         }
-    } catch (error) {
-        console.log(error);
-        res.sendStatus(404)
+    } catch (err) {
+        console.log('Error fetching weather data:', err);
+        res.sendStatus(500);
     }
 });
-
 
 
 app.listen(port, () => {
