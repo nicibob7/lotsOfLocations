@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const port = 3000;
 const countries = require('./countries.json')
+const images = require('./images')
 
 
 const app = express();
@@ -15,7 +16,8 @@ app.use('/music', express.static('frontend/music'));
 app.use('/language', express.static('frontend/language'));
 app.use('/history', express.static('frontend/history'));
 app.use('/map', express.static('frontend/map'));
-app.use('/upload', express.static('frontend/art/gallery'))
+
+app.use(express.static('images'));
 
 // app.use(express.static('/frontend/history/history.html'));
 // app.use(express.static('/frontend/music/music.html'));
@@ -33,6 +35,7 @@ app.get('/art', (req, res) => {
     res.send('/art.index.html')
 })
 
+
 app.get('/music', (req, res) => {
     res.send('/music.index.html')
 })
@@ -44,6 +47,12 @@ app.get('/language', (req, res) => {
 
 app.get('/map', (req, res) => {
     res.send('/map.index.html')
+})
+
+app.get('/getRandomImage', (req, res) => {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const randomImage = images[randomIndex];
+    res.json(randomImage);
 })
 
 
