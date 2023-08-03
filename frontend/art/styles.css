@@ -3,8 +3,11 @@
 }
 
 .logo {
+  
   width: 100px;
   height: 100px;
+  object-fit: fit;
+  
 }
 
 
@@ -24,8 +27,9 @@ body {
   
   .nav_links li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 30px;
     color: white;
+    margin-right: 60px;
     
   }
   
