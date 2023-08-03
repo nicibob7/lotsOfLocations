@@ -35,7 +35,7 @@ app.use(express.static('images'));
 
 
 app.get('/', (req, res) => {
-    res.send('frontend/index.html')
+    res.send('frontend/map.html')
 })
 
 app.get('/countriesData', (req, res) => {
