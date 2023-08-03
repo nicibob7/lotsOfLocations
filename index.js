@@ -1,10 +1,16 @@
 require("dotenv").config();
+const fetch = require('node-fetch-commonjs');
 const express = require('express');
 const cors = require('cors');
-const port = process.env.PORT;
+
+// const port = process.env.PORT;
 const apiKey = process.env.API_KEY;
 const url = 'http://api.weatherstack.com/current'
 const query = 'Montevideo';
+
+// const port = process.env.PORT || 3000;
+const port = 3000
+
 
 const countries = require('./countries.json')
 const images = require('./images')
@@ -13,11 +19,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(cors({
-    origin: 'https://lots-of-locations-lol.onrender.com', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-    allowedHeaders: ['Content-Type', 'Authorization'], 
-  }));
+
 
 app.use(express.static('frontend/homepage'));
 app.use('/art', express.static('frontend/art'));
