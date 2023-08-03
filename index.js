@@ -2,6 +2,9 @@ require("dotenv").config();
 const express = require('express');
 const cors = require('cors');
 const port = process.env.PORT;
+const apiKey = process.env.API_KEY;
+const url = 'http://api.weatherstack.com/current'
+const query = 'Montevideo';
 
 const countries = require('./countries.json')
 const images = require('./images')
@@ -16,7 +19,6 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'], 
   }));
 
-// app.use(express.static('frontend'));
 app.use(express.static('frontend/homepage'));
 app.use('/art', express.static('frontend/art'));
 app.use('/music', express.static('frontend/music'));
@@ -24,7 +26,7 @@ app.use('/language', express.static('frontend/language'));
 app.use('/history', express.static('frontend/history'));
 app.use('/countryhomepage', express.static('frontend/countryhomepage'));
 app.use('/map', express.static('frontend/map'));
-
+app.use('/weather', express.static('frontend/weather'));
 
 app.use(express.static('images'));
 
