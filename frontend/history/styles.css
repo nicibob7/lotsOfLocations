@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   color: #333333;
-  background-color: #f5f5f5;
+  background-color: #f5f5f4;
 }
 
 .logo {
@@ -48,7 +48,7 @@
 
 button {
   padding: 9px 25px;
-  background-color: #77dd77;
+  background-color: #aad3de;
   border: none;
   border-radius: 50px;
   transition: all 0.3s ease 0s;
@@ -133,7 +133,7 @@ h2 {
 }
 
 .front ul {
-  border-top: 3px solid #77dd77;
+  border-top: 3px solid #aad3de;
 }
 
 .front {
@@ -155,13 +155,13 @@ h2 {
 }
 
 .column.flipped .back .answer {
-  border-bottom: 3px solid #77dd77;
+  border-bottom: 3px solid #aad3de;
   padding: 7px;
   margin: 2px;
 }
 
 .column.flipped .back h1 {
-  border-bottom: 3px solid #77dd77;
+  border-bottom: 3px solid #aad3de;
 }
 
 img {
@@ -173,7 +173,7 @@ img {
   display: none;
   flex-flow: row wrap;
   justify-content: left;
-  border: 2px solid #77dd77;
+  border: 2px solid #aad3de;
   border-radius: 5px;
   width: 23.5vh;
   margin-top: 10px;
@@ -192,6 +192,6 @@ img {
 #result {
   font-size: 22px;
   position: absolute;
-  background-color: #77dd77;
+  background-color: #aad3de;
   border-radius: 5px;
 }
