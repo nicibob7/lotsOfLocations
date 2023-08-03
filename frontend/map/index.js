@@ -54,7 +54,13 @@ const questions = [
     if (currentQuestionIndex < questions.length ) {
         question.textContent = questions[currentQuestionIndex].question;
         answer.value = '';
-        } 
+        }
+
+        if (currentQuestionIndex === 1) {
+          inputElement.placeholder = "eg Paris";
+        } else if (currentQuestionIndex === 2) {
+          inputElement.placeholder = "eg English";
+        }
     }
   
   submitAnswer.addEventListener('click', function (e) {
