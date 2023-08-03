@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOL - Uruguay's Music</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles.css">
     <script defer src="index.js"></script>
 </head>
 <body>
@@ -31,7 +31,54 @@
 <h2>Uruguay has a rich musical heritage that spans various genres and styles. 
  Traditional Uruguayan music is deeply influenced by European, African, and indigenous cultures.
 </h2>
-<section class="columns">
+<div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="https://img.theculturetrip.com/wp-content/uploads/2017/01/candombe3.jpg" alt="Paris" style="width:300px;height:200px">
+      </div>
+      <div class="flip-box-back">
+        <h2>Candombe</h2>
+        <p>Candombe is a traditional Afro-Uruguayan music and dance style that originated in Uruguay, particularly in Montevideo, the capital city. It has its roots in the African slave communities that were brought to Uruguay during the colonial era, mainly from West Africa. Candombe is an important cultural and musical expression of Afro-Uruguayan identity.</p>
+      </div>
+    </div>
+  </div>
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="https://pampeano.co.uk/cdn/shop/articles/4274.jpg?v=1635849632" alt="Paris" style="width:300px;height:200px">
+      </div>
+      <div class="flip-box-back">
+        <h2>Tango</h2>
+        <p>Candombe is a traditional Afro-Uruguayan music and dance style that originated in Uruguay, particularly in Montevideo, the capital city. It has its roots in the African slave communities that were brought to Uruguay during the colonial era, mainly from West Africa. Candombe is an important cultural and musical expression of Afro-Uruguayan identity.</p>
+      </div>
+    </div>
+  </div>
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Murgas_%28Vazquez%2C_Marzo_2005_-1%29.jpg/1200px-Murgas_%28Vazquez%2C_Marzo_2005_-1%29.jpg" alt="Paris" style="width:300px;height:200px">
+      </div>
+      <div class="flip-box-back">
+        <h2>Murga</h2>
+        <p>Candombe is a traditional Afro-Uruguayan music and dance style that originated in Uruguay, particularly in Montevideo, the capital city. It has its roots in the African slave communities that were brought to Uruguay during the colonial era, mainly from West Africa. Candombe is an important cultural and musical expression of Afro-Uruguayan identity.</p>
+      </div>
+    </div>
+  </div>
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="https://www.latercera.com/resizer/EpZDke7Ibx_w1W_-Sr42DcYogLY=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/S6MKZMC2P5BW3FH5TRLAANGV5I.jpg" alt="Paris" style="width:300px;height:200px">
+      </div>
+      <div class="flip-box-back">
+        <h2>Uruguayan Rock</h2>
+        <p>Band: No Te Va Gustar</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+<!-- <section class="columns">
 <div class="column">
  <ol>
     Here are some of the prominent genres and artists in Uruguay's music scene:
@@ -90,7 +137,7 @@
         commentary in their lyrics.</li>
  </ul>
 </div>
-</section>
+</section> -->
 <section class="columns">
     <audio class="column" controls>
         <source src="https://www2.cs.uic.edu/~i101/SoundFiles/ImperialMarch60.wav" type="audio/mpeg">
@@ -124,6 +171,16 @@
      musical landscape in Uruguay. The country's
       music reflects its multicultural history
        and the creative spirit of its people.</p>
-
+</section>
+<section>
+  <form id="musicReview">
+    <label for="Review">What is the most popular genre in Uruguay?</label>
+        <input id="Review" type="text" name="Review" placeholder="Review">
+    <label for="ReviewName">What is the capital city of Uruguay?</label>    
+        <input id="ReviewName" type="text" name="ReviewName" placeholder="Name">
+        <input type="submit" value ="Check">
+</section>
+<section>
+  <p id="Reviews"></p>
 </section>
 </html>
