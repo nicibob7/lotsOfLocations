@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 
-/* * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -110,7 +110,7 @@ header {
 
   section{
     color: #edf0f1;
-  } */
+  }
 
   .flip-box-inner {
     position: relative;
@@ -121,7 +121,7 @@ header {
     transform-style: preserve-3d;
   }
 
-  .flip-box:hover .flip-box-inner {
+  .flip-box:active .flip-box-inner {
     transform: rotateY(180deg);
   }
 
@@ -129,7 +129,7 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
@@ -138,7 +138,7 @@ header {
     top: 0px;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
@@ -152,4 +152,62 @@ header {
     background-color: dodgerblue;
     color: black;
     transform: rotateY(180deg);
+  } */
+
+  .flex-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .container{
+    margin:10px;
+    display: block;
+    height: 500px;
+    width: 500px;
+  }
+
+  .container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg)
+  }
+
+  .card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+  }
+
+  .front,
+  .back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 20px;
+  }
+
+  #front1{
+    background-image: url("https://img.theculturetrip.com/wp-content/uploads/2017/01/candombe3.jpg/")
+  }
+
+  #front2{
+    background-image: url("https://pampeano.co.uk/cdn/shop/articles/4274.jpg")
+  }
+
+  #front3{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Murgas_%28Vazquez%2C_Marzo_2005_-1%29.jpg/1200px-Murgas_%28Vazquez%2C_Marzo_2005_-1%29.jpg")
+  }
+
+  #front4{
+    background-image: url("https://www.latercera.com/resizer/EpZDke7Ibx_w1W_-Sr42DcYogLY=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/S6MKZMC2P5BW3FH5TRLAANGV5I.jpg")
+  }
+
+  .back{
+    background-color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
