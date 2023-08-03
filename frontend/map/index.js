@@ -119,7 +119,7 @@ const questions = [
         isShowingRules = false;
     } else {
         const paragraph = document.createElement('p');
-    paragraph.textContent = "To enter and learn about a specific country, you need to enter three correct answers to the questions provided. If sucessfully answered, a button will appear to enter the country page. If for any reason you are in doubt after 5 incorrect tries, a button will appear in the popup that will lead you to the page. Good luck!";
+    paragraph.textContent = "To explore and discover more about a particular country, you must first answer three questions correctly. Upon successfully answering these questions, a button will emerge, granting you access to the country's page. If you encounter difficulty and provide two incorrect answers, a helpful hint will appear in the form of an alert, guiding you toward the correct path. After all questions are answered, the map's zoom function will become available, allowing you to enjoy a closer look at various regions before entering the country. Happy exploring, and good luck!";
    howToPlay.appendChild(paragraph);
    isShowingRules = true;
     }
