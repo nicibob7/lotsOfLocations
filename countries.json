@@ -3,7 +3,7 @@
     { "name": "Uruguay",
     "quiz": {
         "questions": ["What's the best-selling band in Uruguay", "When did the tango dance originate", "Name the prominent Uruguayan genre that features dance and has its roots in the Afro-Uruguayan community", "What's the genre of Uruguayan music that is a form of musical theatre", "Which Uruguayan musician was famous for blending folk, rock, and jazz influences"],
-        "answers": ["Good", "Bad", "Ugly"]
+        "answers": ["No te va gustar", "1880", "Candombe", "Murga", "Edouardo Mateo"]
     }
 }
 ]
