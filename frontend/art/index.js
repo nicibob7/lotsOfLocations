@@ -136,3 +136,9 @@ imageBox.addEventListener('click', hideImageBox)
 
 
 
+// Art description 
+// The area that is today’s Uruguay was populated during pre-Columbian times by non-resident tribes. These left behind a few ceramic objects of ceremonial nature. During colonial times, Uruguay’s culture was influenced by the Guarani culture that had developed in Jesuit missions in northeastern Argentina.
+
+// After independence in the early 19th century, art life was dominated by academics such as history painter Juan Manuel Blanes. At the turn of the century, several artists who studied in Europe took the impression of Impressionism, e.g. Carlos María Herrera and Carlos Federico Sáez. Rafael Barradas, Pedro Figari and Joaquín Torres García introduced modernism, and Torres García founded the Taller Torres García art school in 1944, which would have great significance. In this school, among other things, Julio Alpuy, Guillermo Fernández, Gonzalo Fonseca, Francisco Matto, Manuel Pailós and Augusto and Horacio Torres.
+
+// Uruguay’s most important art museums are the Museo Nacional de Artes Visuales, the Museo Juan Manuel Blanes and the Museo Torres García, all in Montevideo.
