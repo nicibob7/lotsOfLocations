@@ -44,9 +44,9 @@ async function displayWeather() {
 
         // Append new elements to the weatherSection
         
+        weatherSection.appendChild(timeInfoParagraph);
         weatherSection.appendChild(weatherInfoParagraph);
         weatherSection.appendChild(weatherIconImage);
-        weatherSection.appendChild(timeInfoParagraph);
     } else {
         weatherSection.textContent = "Failed to fetch display weather data.";
     }
