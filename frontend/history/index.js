@@ -50,7 +50,7 @@ document
   .addEventListener("click", getRandomFact);
 
 function getRandomFact() {
-  fetch("https://lots-of-locations-lol.onrender.com/countriesData")
+  fetch("/countriesData")
     .then((response) => response.json())
     .then((data) => {
       console.log(data[0]);
