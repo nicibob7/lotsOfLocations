@@ -173,7 +173,7 @@ img {
 }
 
 #randomFactText {
-  display: none;
+  display: flex;
   color: #edf0f1;
   flex-flow: row wrap;
   justify-content: left;

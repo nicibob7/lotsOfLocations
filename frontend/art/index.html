@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Draw your thoughts!</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  <script defer src="index.js"></script>
-  <link rel="stylesheet" href="styles.css">
-  
-</head>
-<body>
+  <head>
+    <title>Draw your thoughts!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <a href="https://lots-of-locations-lol.onrender.com/map/"><img class="logo" src="../history/lol.png" alt="logo" /></a>
-    <nav>
+      <a href="https://lots-of-locations-lol.onrender.com/map/"
+        ><img class="logo" src="../history/lol.png" alt="logo"
+      /></a>
+      <nav>
         <ul class="nav_links">
-          <li>
-            <a href="https://lots-of-locations-lol.onrender.com/map/"
-              >Map</a
-            >
-          </li>
           <li><a href="/music/">Music</a></li>
           <li><a href="/language/">Language</a></li>
           <li><a href="/history/">History</a></li>
         </ul>
       </nav>
+      <a class="home" href="/map/"><button>Home</button></a>
     </header>
     <h1>Uruguayan Art</h1>
     <h2>What to do</h2>
     <div id="imageBox" style="display: none">
-        <img id="imageElement" src="" alt="">
-        <p id="imageDescription"></p>
+      <img id="imageElement" src="" alt="" />
+      <p id="imageDescription"></p>
     </div>
     <div id="drawing-container">
-        <div id="drawing">
-            <button id="changeColor">Change Color</button>
-            <input type="color" id="colorPicker"/>
-            <label for="strokeSizeSlider">Stroke Size:</label>
-            <input type="range" id="strokeSizeSlider" min="1" max="20" step="1" value="8" >
-            <span id="strokeSizeLabel">8</span>
-            <button id="eraseDrawing">Erase Drawing</button>
-            <button id="takeScreenshot">Take Screenshot</button>
-            <button id="inspire">Inspire Me!</button>
-        </div>
+      <div id="drawing">
+        <button id="changeColor">Change Color</button>
+        <input type="color" id="colorPicker" />
+        <label for="strokeSizeSlider">Stroke Size:</label>
+        <input
+          type="range"
+          id="strokeSizeSlider"
+          min="1"
+          max="20"
+          step="1"
+          value="8"
+        />
+        <span id="strokeSizeLabel">8</span>
+        <button id="eraseDrawing">Erase Drawing</button>
+        <button id="takeScreenshot">Take Screenshot</button>
+        <button id="inspire">Inspire Me!</button>
+      </div>
     </div>
     <div id="centerBox">
-        <div id="imageGallery"></div>
+      <div id="imageGallery"></div>
     </div>
-  
-</body>
+  </body>
 </html>
