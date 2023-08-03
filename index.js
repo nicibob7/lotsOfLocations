@@ -42,7 +42,7 @@ app.use("/upload", express.static("frontend/art/gallery"));
 =======
 
 
-app.use(express.static('frontend/homepage'));
+app.use(express.static('frontend/map'));
 app.use('/art', express.static('frontend/art'));
 app.use('/music', express.static('frontend/music'));
 app.use('/language', express.static('frontend/language'));
