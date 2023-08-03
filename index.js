@@ -36,11 +36,16 @@ app.get('/art', (req, res) => {
 })
 
 app.get('/music', (req, res) => {
-    fetch("https://api.spotify.com")
-    .catch((err) => {
-        console.log('rejected', err)
-    })
     res.send('/music.index.html')
+})
+
+app.post('/music', (req, res) => {
+    const newReview = req.body
+    console.log(newReview)
+    console.log(countries)
+    countries[0]["review"] = newReview
+    console.log(countries)
+    res.status(201).send(newReview)
 })
 
 app.get('/language', (req, res) => {
