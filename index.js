@@ -3,8 +3,8 @@ const fetch = require('node-fetch-commonjs');
 const express = require('express');
 const cors = require('cors');
 
-const port = 3000;
-const apiKey = "ad15d95bd5fa173b58f47fc05e070598";
+const port = process.env.PORT;
+const apiKey = process.env.API_KEY;
 const url = 'http://api.weatherstack.com/current'
 const query = 'Montevideo';
 
