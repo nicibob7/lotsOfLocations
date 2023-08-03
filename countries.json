@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
   {
     "name": "Uruguay",
     "quiz_answers": ["Rock", "Pop", "Classical", "Jazz", "Metal"],
@@ -25,4 +26,12 @@
       "The national drink of Uruguay is Mate, a traditional herbal tea, and it plays an essential role in the country's social customs."
     ]
   }
+=======
+    { "name": "Uruguay",
+    "quiz": {
+        "questions": ["What's the best-selling band in Uruguay", "When did the tango dance originate", "Name the prominent Uruguayan genre that features dance and has its roots in the Afro-Uruguayan community", "What's the genre of Uruguayan music that is a form of musical theatre", "Which Uruguayan musician was famous for blending folk, rock, and jazz influences"],
+        "answers": ["No te va gustar", "1880", "Candombe", "Murga", "Edouardo Mateo"]
+    }
+}
+>>>>>>> b22ff9b1f6fe926894bf09cb9d36a2a74322ad88
 ]

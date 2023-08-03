@@ -15,6 +15,10 @@ const strokeSizeLabel = document.querySelector('#strokeSizeLabel');
 const eraseButton = document.querySelector('#eraseDrawing');
 const takeScreenshotButton = document.querySelector('#takeScreenshot')
 const imageGallery = document.querySelector('#imageGallery')
+const inspireMeButton = document.querySelector('#inspire')
+const imageBox = document.querySelector('#imageBox')
+const imageElement = document.querySelector('#imageElement')
+const imageDescription = document.querySelector('#imageDescription')
 
 changeColorButton.addEventListener('click', changeColor);
 
@@ -25,6 +29,8 @@ strokeSizeSlider.addEventListener('input', updateStrokeSize);
 eraseButton.addEventListener('click', eraseDrawing)
 
 takeScreenshotButton.addEventListener('click', takeScreenshot)
+
+
 
 function takeScreenshot() {
     const canvas = document.querySelector('canvas')
@@ -38,6 +44,7 @@ function displayScreenshot(imageURL) {
     screenshotDiv.classList.add('screenshot');
     const screenShotImage = document.createElement('img');
     screenShotImage.src = imageURL;
+ 
     screenShotImage.width = 200; 
     screenShotImage.height = 200;
     imageGallery.appendChild(screenshotDiv);
@@ -91,8 +98,47 @@ function toggleRules() {
         isShowingRules = false;
     } else {
         const paragraph = document.createElement('p');
-    paragraph.textContent = "Here is a space to be able to draw your thoughts and feelings of what you have learnt. Once you have finished your drawing you can press take a screenshot to see your image below! (you can take as many as you want). If you're stuck on what to draw, press the inpsire me button and hopefully you will feel more inspired!";
+    paragraph.textContent = "Here, you have the unique opportunity to express and visualise your newfound knowledge by drawing your impressions and learnings about this beautiful country. Get creative and use our drawing tool to depict the landscapes, culture, and iconic landmarks of Uruguay. Additionally, you can take inspiration from a collection of captivating Uruguayan artworks showcased on the page by pressing the inspire me button. Let your imagination flow, and once you're satisfied with your artwork, simply press the 'Take a Screenshot' button to save and admire your creation. So, immerse yourself in the rich heritage of Uruguay and let your drawings tell the story of your discoveries! If you want to make multiple artworks, press take a screenshot and see your gallery build up below!";
    whatToDo.appendChild(paragraph);
    isShowingRules = true;
     }
 }
+
+async function getRandomImage() {
+  try {
+    const response = await fetch('http://localhost:3000/getRandomImage');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log('There has been an error loading the image');
+    return null;
+  }
+}
+
+async function showRandomImage() {
+  imageBox.style.display = 'block';
+// })
+  const randomImage = await getRandomImage();
+  if (randomImage) {
+    imageElement.src = randomImage.imageUrl;
+    imageDescription.textContent = randomImage.description;
+  }
+}
+
+function hideImageBox() {
+  // Hide the image box
+  imageBox.style.display = 'none';
+}
+
+inspireMeButton.addEventListener('click', showRandomImage);
+
+imageBox.addEventListener('click', hideImageBox)
+
+
+
+// Art description 
+// The area that is today’s Uruguay was populated during pre-Columbian times by non-resident tribes. These left behind a few ceramic objects of ceremonial nature. During colonial times, Uruguay’s culture was influenced by the Guarani culture that had developed in Jesuit missions in northeastern Argentina.
+
+// After independence in the early 19th century, art life was dominated by academics such as history painter Juan Manuel Blanes. At the turn of the century, several artists who studied in Europe took the impression of Impressionism, e.g. Carlos María Herrera and Carlos Federico Sáez. Rafael Barradas, Pedro Figari and Joaquín Torres García introduced modernism, and Torres García founded the Taller Torres García art school in 1944, which would have great significance. In this school, among other things, Julio Alpuy, Guillermo Fernández, Gonzalo Fonseca, Francisco Matto, Manuel Pailós and Augusto and Horacio Torres.
+
+// Uruguay’s most important art museums are the Museo Nacional de Artes Visuales, the Museo Juan Manuel Blanes and the Museo Torres García, all in Montevideo.
