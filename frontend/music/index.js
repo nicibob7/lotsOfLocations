@@ -1,5 +1,6 @@
 const musicForm = document.querySelector("#musicForm")
 const reviewForm = document.querySelector("#musicReview")
+
 let arr = []
 let review = ""
 let reviewer = ""
@@ -16,6 +17,10 @@ musicForm.addEventListener("submit", getAnswer5)
 
 reviewForm.addEventListener("submit", getReview)
 reviewForm.addEventListener("submit", getName)
+
+function flip(e){
+    e.classList.toggle("active")
+}
 
 fetchQuestions()
 
