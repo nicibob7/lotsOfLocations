@@ -5,8 +5,6 @@ const cors = require('cors');
 const countries = require('./countries.json')
 const images = require('./images')
 
-import fetch from 'node-fetch';
-
 const app = express();
 app.use(cors());
 app.use(express.json());
