@@ -117,6 +117,7 @@ async function getRandomImage() {
 
 async function showRandomImage() {
   imageBox.style.display = 'block';
+  
 // })
   const randomImage = await getRandomImage();
   if (randomImage) {
