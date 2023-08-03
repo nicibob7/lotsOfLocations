@@ -20,7 +20,7 @@ reviewForm.addEventListener("submit", getName)
 fetchQuestions()
 
 function fetchQuestions(){
-    fetch("http://127.0.0.1:3000/countriesData")
+    fetch("/countriesData")
     .then((response) => {
         return response.json()
     })
@@ -94,7 +94,7 @@ function getAnswer5(e){
 }
 
 function checkAnswer(value){
-    fetch("http://127.0.0.1:3000/countriesData")
+    fetch("/countriesData")
     .then((response) => {
     console.log('resolved', response)
     return response.json()
@@ -161,7 +161,7 @@ async function getName(e){
         body: JSON.stringify(reviewObj)
     }
 
-    const response = await fetch("http://127.0.0.1:3000/music", options)
+    const response = await fetch("/music", options)
     .then(response => {
         console.log(response)
         return response.json()
