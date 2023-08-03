@@ -50,7 +50,7 @@ document
   .addEventListener("click", getRandomFact);
 
 function getRandomFact() {
-  fetch("http://127.0.0.1:3000/countriesData")
+  fetch("/countriesData")
     .then((response) => response.json())
     .then((data) => {
       console.log(data[0]);
