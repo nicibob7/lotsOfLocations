@@ -3,7 +3,6 @@
 *{
 font-family: "Plus Jakarta Sans", sans-serif;
 font-size: 20px;
-box-sizing: border-box;
 margin: 0;
 padding: 0;
 color: #333333;
@@ -22,6 +21,7 @@ header{
 h2{
     text-align: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .nav_links {
@@ -121,4 +121,24 @@ h2{
     max-height: 25rem;
 }
 
+/* 
+<div class="row">
+<div class="col">
+<div class="card-group">
+ <div class="card text-center >
+  <p class="card-text" style="font-size: 90px" >&#127926; &#128251;</p>
+  <div class="card-body">
+  <a href="https://lots-of-locations-lol.onrender.com/music/ " class="card-link stretched-link"> 
+  <h3 class="card-title">Music</h3>  </a>
+  <p class="card-text"> Discover the Rhythms of Uruguay! </p>
+  <p class="card-text">  Welcome to an immersive musical journey through Uruguay, a land of enchanting melodies and captivating rhythms.   </p>   
+          </div> 
+      </div>
+    </div>
+</div> */
 
+
+ .card-group{
+
+    height: 100%;
+  }
