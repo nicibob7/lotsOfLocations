@@ -116,9 +116,7 @@ async function getRandomImage() {
 }
 
 async function showRandomImage() {
-  
-   const isVisible = imageBox.style.display === 'block';
-   imageBox.style.display = isVisible ? 'none' : 'block';
+  imageBox.style.display = 'block';
 // })
   const randomImage = await getRandomImage();
   if (randomImage) {
@@ -127,7 +125,14 @@ async function showRandomImage() {
   }
 }
 
+function hideImageBox() {
+  // Hide the image box
+  imageBox.style.display = 'none';
+}
+
 inspireMeButton.addEventListener('click', showRandomImage);
+
+imageBox.addEventListener('click', hideImageBox)
 
 
 
