@@ -13,16 +13,19 @@ body {
     display: block;
     justify-content: center;
   align-items: center;
+  background-color: black;
   /* height: 100vh; */
   }
 
   .nav_links {
     list-style: none;
+
   }
   
   .nav_links li {
     display: inline-block;
     padding: 0px 20px;
+    color: white;
     
   }
   
@@ -30,7 +33,7 @@ body {
     transition: all 0.3s ease 0s;
     position: relative;
     text-decoration: none;
-    color: black;
+    color: white;
   }
   
   .nav_links li a:hover {
@@ -51,6 +54,7 @@ body {
   
   .nav_links li a:hover::before {
     transform: scaleX(1); /* Show underline on hover */
+    
   }
 
   header {
@@ -58,6 +62,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px 10%;
+    
   }
 
   #drawing-container {
@@ -65,6 +70,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    
   }
 
 
@@ -73,6 +79,7 @@ body {
     width: 600px;
     height: 612px;
       border: 2px solid black;
+      background-color: white;
   }
 
   #centerBox {
@@ -91,6 +98,7 @@ body {
     width: 600px;
     height: vh;
     border: 1px solid black;
+    background-color: white;
  }
 
  h1, h2 {
@@ -99,12 +107,14 @@ body {
     border: 1px solid black;
     margin-left: 20px;
     margin-right: 20px;
+    color: white;
  }
 
  h2 {
     cursor: pointer;
     border-radius: 20px;
     background-color: lightgray;
+    color: black;
  }
 
  img {
