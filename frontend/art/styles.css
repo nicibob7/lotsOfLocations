@@ -1,9 +1,68 @@
+* {
+  font-family: monospace;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+
 body {
     margin: 0;
     display: block;
     justify-content: center;
   align-items: center;
-  height: 100vh;
+  background-color: black;
+  /* height: 100vh; */
+  }
+
+  .nav_links {
+    list-style: none;
+
+  }
+  
+  .nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+    color: white;
+    
+  }
+  
+  .nav_links li a {
+    transition: all 0.3s ease 0s;
+    position: relative;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav_links li a:hover {
+    color: #0088a9;
+  }
+  
+  .nav_links li a::before {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    width: 100%;
+    height: 2px; /* thickness */
+    background-color: #0088a9;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: center bottom; /* Origin at left bottom */
+    transition: transform 0.5s ease;
+  }
+  
+  .nav_links li a:hover::before {
+    transform: scaleX(1); /* Show underline on hover */
+    
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    
   }
 
   #drawing-container {
@@ -11,14 +70,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    
   }
 
 
   #drawing {
     text-align: center;
     width: 600px;
-    height: 600px;
+    height: 612px;
       border: 2px solid black;
+      background-color: white;
   }
 
   #centerBox {
@@ -37,6 +98,7 @@ body {
     width: 600px;
     height: vh;
     border: 1px solid black;
+    background-color: white;
  }
 
  h1, h2 {
@@ -45,12 +107,35 @@ body {
     border: 1px solid black;
     margin-left: 20px;
     margin-right: 20px;
+    color: white;
  }
 
  h2 {
     cursor: pointer;
     border-radius: 20px;
     background-color: lightgray;
+    color: black;
  }
 
+ img {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+ }
  
+#imageBox {
+  text-align: center;
+  display: flex; 
+  flex-wrap: wrap;
+  color: white;
+}
+
+button {
+margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

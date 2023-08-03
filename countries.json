@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Uruguay",
+    "quiz": {
+      "questions": [
+        "What's the best-selling band in Uruguay",
+        "When did the tango dance originate",
+        "Name the prominent Uruguayan genre that features dance and has its roots in the Afro-Uruguayan community",
+        "What's the genre of Uruguayan music that is a form of musical theatre",
+        "Which Uruguayan musician was famous for blending folk, rock, and jazz influences"
+      ],
+      "answers": [
+        "No te va gustar",
+        "1880",
+        "Candombe",
+        "Murga",
+        "Edouardo Mateo"
+      ]
+    },
+    "factsAboutUruguay": [
+      "Uruguay was originally inhabited by various indigenous tribes, including the Charrúa and Guarani peoples.",
+      "In the 17th century, the Spanish established the first permanent settlement in present-day Uruguay, called Colonia del Sacramento.",
+      "The region of present-day Uruguay was fiercely contested by Spain and Portugal during the colonial period, leading to multiple conflicts.",
+      "Uruguay gained its independence from Brazil in 1828 after the Cisplatine War, becoming an independent nation.",
+      "The country's name 'Uruguay' is derived from the Guarani language, meaning 'river of painted birds.'",
+      "During the mid-19th century, Uruguay experienced a period of political instability known as the Guerra Grande or Great War.",
+      "In 1903, Uruguay became the first country in South America to establish a welfare state, providing free education and healthcare to its citizens.",
+      "The first World Cup of football (soccer) was hosted by Uruguay in 1930, and they also won the tournament, becoming the first-ever World Cup champions.",
+      "Uruguay is known for its strong tradition of social welfare and progressive policies, including legalizing divorce in 1907 and abortion in 2012.",
+      "The Tupamaros, a revolutionary urban guerrilla group, emerged in the 1960s and engaged in armed struggle against the government, leading to a period of military dictatorship.",
+      "Uruguay's military dictatorship, which lasted from 1973 to 1985, was one of the bloodiest in South America, with numerous human rights violations.",
+      "The country transitioned to democracy in 1985, and the Truth and Reconciliation Commission was established to investigate human rights abuses during the dictatorship.",
+      "Uruguay is known for its progressive stance on LGBTQ+ rights, being one of the first countries in the region to legalize same-sex civil unions in 2007.",
+      "In 2013, Uruguay became the first country in the world to legalize the production, sale, and consumption of marijuana.",
+      "José Mujica, Uruguay's president from 2010 to 2015, gained international fame for his humble lifestyle and donation of most of his salary to charity.",
+      "Uruguay has a strong literary tradition, with writers such as Horacio Quiroga and Mario Benedetti gaining recognition worldwide.",
+      "The country has a high literacy rate of over 98%, making it one of the most literate nations in the world.",
+      "Montevideo, the capital of Uruguay, is known for its well-preserved colonial architecture and beautiful beaches.",
+      "Uruguay is often referred to as the 'Switzerland of South America' due to its stable economy and banking sector.",
+      "The national drink of Uruguay is Mate, a traditional herbal tea, and it plays an essential role in the country's social customs."
+    ]
+  }
+]

@@ -1,61 +1,122 @@
-$(document).ready(function () {
+//vamo arriba
 
-    var colorArray=["#019875","#1E8BC3","#D91E18","#D35400","#8E44AD","#C0392B"];
-    var cardState;
-    var currentQuestion=0;
-    var qbank=new Array;
-   
-    loadDB();
-   
-    function loadDB(){
-     $.getJSON("activity.json", function(data) {
-      for(i=0;i<data.questionlist.length;i++){
-       qbank[i]=[];
-       qbank[i][0]=data.questionlist[i].cardfront;
-       qbank[i][1]=data.questionlist[i].cardback;
-      }//for
-      beginActivity();
-     })//gtjson
-    }//loadDB
-   
-    function beginActivity(){
-     cardState=0;
-     var color1=colorArray[Math.floor(Math.random()*colorArray.length)];
-     $("#cardArea").empty();
-     $("#cardArea").append('<div id="card1" class="card">' + qbank[currentQuestion][0] + '</div>');
-     $("#cardArea").append('<div id="card2" class="card">' + qbank[currentQuestion][1] + '</div>');
-     $("#card1").css("background-color",color1);
-     $("#card2").css("background-color","#34495E");
-     $("#card2").css("top","200px");
-     $("#cardArea").on("click",function(){
-      if(cardState!=1){
-       cardState=1;
-       //togglePosition();
-       $("#card1").animate({top: "-=200"}, 150, function() {cardState=0;togglePosition();});
-       $("#card2").animate({top: "-=200"}, 150, function() {togglePosition2();});
-      }//if
-     });//click function
-     currentQuestion++;
-     $("#buttonArea").empty();
-     $("#buttonArea").append('<div id="nextButton">NEXT</div>');
-     $("#nextButton").on("click",function(){
-      if(currentQuestion<qbank.length){beginActivity();}
-      else{displayFinalMessage();}
-     });//click function
-    }//beginactivity
-   
-    function togglePosition(){
-     if($("#card1").position().top==-200){$("#card1").css("top","200px");};
-    }//toggle
-   
-    function togglePosition2(){
-     if($("#card2").position().top==-200){$("#card2").css("top","200px");};
-    }//toggle2
-   
-    function displayFinalMessage(){
-     $("#buttonArea").empty();
-     $("#cardArea").empty();
-     $("#cardArea").append('<div id="finalMessage">You have finished the activity.</div>');
-    }//final message
-   
-   });
+function playVamoArriba() {
+const playerButton1 = document.querySelector('.player-button1'),
+      audio1 = document.querySelector('.audio1'),
+      playIcon1 = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+  </svg>
+      `
+
+function toggleAudio () {
+  if (audio1.paused) {
+    audio1.play();
+  } else {
+    audio1.pause();
+  }
+}
+
+playerButton1.addEventListener('click', toggleAudio);
+}
+
+playVamoArriba();
+
+//No tiene Gollete
+
+function playNoTieneGollete(){
+
+const playerButton2 = document.querySelector('.player-button2'),
+      audio2 = document.querySelector('.audio2'),
+      playIcon2 = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+  </svg>
+      `
+
+function toggleAudio () {
+  if (audio2.paused) {
+    audio2.play();
+  } else {
+    audio2.pause();
+  }
+}
+
+playerButton2.addEventListener('click', toggleAudio);
+
+}
+
+playNoTieneGollete();
+
+
+//Che
+function playChe() {
+const playerButton3 = document.querySelector('.player-button3'),
+      audio3 = document.querySelector('.audio3'),
+      playIcon3 = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+  </svg>
+      `
+
+function toggleAudio () {
+  if (audio3.paused) {
+    audio3.play();
+  } else {
+    audio3.pause();
+  }
+}
+
+    playerButton3.addEventListener('click', toggleAudio);
+}
+
+    playChe();
+ 
+
+//Todo bien
+function playTodoBien() {
+const playerButton4 = document.querySelector('.player-button4'),
+      audio4 = document.querySelector('.audio4'),
+      playIcon4 = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+  </svg>
+      `
+
+function toggleAudio () {
+  if (audio4.paused) {
+    audio4.play();
+  } else {
+    audio4.pause();
+  }
+}
+
+playerButton4.addEventListener('click', toggleAudio);
+}
+
+
+playTodoBien();
+
+//Dale
+
+function playDale(){
+const playerButton5 = document.querySelector('.player-button5'),
+      audio5 = document.querySelector('.audio5'),
+      playIcon5 = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+  </svg>
+      `
+
+function toggleAudio () {
+  if (audio5.paused) {
+    audio5.play();
+  } else {
+    audio5.pause();
+  }
+}
+
+playerButton5.addEventListener('click', toggleAudio);
+}
+
+playDale();

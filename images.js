@@ -25,11 +25,13 @@ const images = [
       },
       {
         imageUrl: '/manuel.jpeg',
+
         description: `Constructivist Diagrams: by Manuel Pailós Hall.`,
       },
       {
         imageUrl: '/gothic.jpeg',
         description: `Architectonic gothic style is present across Uruguay.`,
+
       }
 ]
 
