@@ -134,6 +134,9 @@ const questions = [
 
 
 
-
-
-  
+  inputElement.addEventListener('keyup', function(e) {
+    if (e.keyCode === 13) { 
+        e.preventDefault();
+        submitAnswer.click(); 
+    }
+});
