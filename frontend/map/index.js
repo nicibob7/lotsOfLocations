@@ -76,7 +76,7 @@ const questions = [
         } else {
             alert('All the questions have been answered, now time to learn about Uruguay!');
             
-      question.textContent = questions[currentQuestionIndex - 1].nextQuestion;
+      question.textContent = questions[currentQuestionIndex].nextQuestion;
       submitAnswer.style.fontSize = '50px';
       submitAnswer.textContent = 'PRESS HERE';
       const labelElement = document.querySelector("label[for='answer']");
