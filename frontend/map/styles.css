@@ -14,7 +14,7 @@ body {
     width: calc(100% - 200px); 
     margin: 20px auto; 
     border-radius: 400px;
-    border: 10px solid #f2efe9;
+    border: 10px solid #77DD77;
    
 }
 
@@ -25,15 +25,16 @@ body {
 
 #submitAnswer {
     margin-top: 15px;
-    font-family: 'Fredoka', sans-serif;;
+    font-family: monospace;
     border-radius: 10px;
 }
 
 nav, #container {
     margin-top: 40px;
+    margin-bottom: 40px;
     /* border: 1px solid white; */
-    border-radius: 10px;
-    font-family: 'Fredoka', sans-serif;
+    border-radius: 40px;
+    font-family: monospace;
     color: black;
     text-align: center;
     cursor: pointer;
@@ -50,7 +51,7 @@ nav {
     margin-top: 10px;
    margin-left: 50px;
    margin-right: 50px;
-    border: 5px solid #f95565;
+    border: 5px solid #77DD77;
 }
 
 
@@ -68,4 +69,5 @@ h1 {
 
 p {
     font-size: 20px;
+    font-family: monospace;
 }
