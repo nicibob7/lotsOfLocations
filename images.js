@@ -22,6 +22,10 @@ const images = [
       {
         imageUrl: '/montevid.jpeg',
         description: `Montevideo's Old Town`,
+      },
+      {
+        imageUrl: '/manuel.jpeg',
+        description: `Constructivist Diagrams: by Manuel Pailós Hall`,
       }
 ]
 
