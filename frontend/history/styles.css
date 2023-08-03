@@ -108,7 +108,7 @@ h2 {
 
 .column {
   flex: 1;
-  margin: 20px;
+  margin: 50px;
   padding: 20px;
   transition: 1s;
   position: relative; /*Creates stacking context*/
