@@ -17,6 +17,35 @@ musicForm.addEventListener("submit", getAnswer5)
 reviewForm.addEventListener("submit", getReview)
 reviewForm.addEventListener("submit", getName)
 
+fetchQuestions()
+
+function fetchQuestions(){
+    fetch("http://127.0.0.1:3000/countriesData")
+    .then((response) => {
+        return response.json()
+    })
+    .then((response) => {
+        console.log(response)
+        return(response[0])
+    })
+    .then((response) => {
+        return(response.quiz)
+    })
+    .then((response) => {
+        console.log(response)
+        document.querySelector("#question1").textContent = `${response.questions[0]}?`
+        document.querySelector("#question2").textContent = `${response.questions[1]}?`
+        document.querySelector("#question3").textContent = `${response.questions[2]}?`
+        document.querySelector("#question4").textContent = `${response.questions[3]}?`
+        document.querySelector("#question5").textContent = `${response.questions[4]}?`
+    })
+    .catch((err) => {
+        console.log(err, "Error!")
+    })
+}
+
+
+
 function getAnswer1(e){
     e.preventDefault()
     console.log(e.target.musicQuiz1.value)
@@ -74,9 +103,14 @@ function checkAnswer(value){
     return data[0]
 }).then(data => {
     console.log(data)
-    return data.quiz_answers
+    console.log(data.quiz)
+    return data.quiz
 }).then(data => {
-    for(let i = 0; i < arr.length; i++){
+    console.log(data.answers)
+    return(data.answers)
+}).then(data => {
+    console.log(data)
+    for(let i = 0; i < data.length; i++){
         arr[i] = arr[i].toLowerCase()
         data[i] = data[i].toLowerCase()
     }
@@ -90,7 +124,14 @@ function checkAnswer(value){
         }
         console.log(counter)
     }
+    let solutions = ""
+    for(let i = 0; i < data.length - 1; i++){
+        solutions += data[i] + ", "
+    }
+    solutions += data[data.length - 1]
+    console.log(solutions)
     document.querySelector("#answer").textContent = `You scored ${counter}/${data.length}`
+    document.querySelector("#correctAnswers").textContent =`The correct answers were: ${solutions}.`
     arr = []
     console.log(arr)
 })
