@@ -2,6 +2,7 @@
 
 * {
   font-family: monospace;
+  font-size: 20px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -63,7 +64,6 @@ button:hover {
 li,
 a,
 button {
-  font-size: 16px;
   text-decoration: none;
 }
 
@@ -86,7 +86,6 @@ h1 {
 }
 
 .instructions {
-  font-size: 20px;
   text-align: center;
   padding-top: 10px;
 }
@@ -191,7 +190,6 @@ img {
 }
 
 #result {
-  font-size: 22px;
   position: absolute;
   background-color: #aad3de;
   border-radius: 5px;
