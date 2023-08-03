@@ -1,5 +1,8 @@
 const musicForm = document.querySelector("#musicForm")
+const reviewForm = document.querySelector("#musicReview")
 let arr = []
+let review = ""
+let reviewer = ""
 
 // const express = require('express')
 // const cors = require('cors');
@@ -10,6 +13,9 @@ musicForm.addEventListener("submit", getAnswer2)
 musicForm.addEventListener("submit", getAnswer3)
 musicForm.addEventListener("submit", getAnswer4)
 musicForm.addEventListener("submit", getAnswer5)
+
+reviewForm.addEventListener("submit", getReview)
+reviewForm.addEventListener("submit", getName)
 
 function getAnswer1(e){
     e.preventDefault()
@@ -90,3 +96,39 @@ function checkAnswer(value){
 })
     .catch((err) => console.log(`Unable to retrieve data`))
 }
+
+function getReview(e){
+    e.preventDefault()
+    console.log(e.target.Review.value)
+    review = e.target.Review.value
+}
+
+async function getName(e){
+    e.preventDefault()
+    console.log(e.target.ReviewName.value)
+    reviewer = e.target.ReviewName.value
+    let reviewObj = {}
+    reviewObj["name"] = reviewer
+    reviewObj["text"] = review
+    console.log(reviewObj)
+
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(reviewObj)
+    }
+
+    const response = await fetch("http://127.0.0.1:3000/music", options)
+    .then(response => {
+        console.log(response)
+        return response.json()
+    }).then(response => {
+        console.log(response.name)
+        document.querySelector("#Reviews").textContent = `${response.text} - from ${response.name}`
+    }).catch((err) => {
+        console.log(err, "Error")
+    })
+}
+
