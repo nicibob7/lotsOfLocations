@@ -24,6 +24,7 @@ body {
 
 .nav_links li a {
   color: #333333;
+  font-size: 20px;
   transition: all 0.3s ease 0s;
   position: relative;
 }
@@ -47,6 +48,7 @@ body {
 .nav_links li a:hover::before {
   transform: scaleX(1); /* Show underline on hover */
 }
+
 button {
   padding: 9px 25px;
   background-color: #aad3de;
