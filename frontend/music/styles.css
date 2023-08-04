@@ -1,161 +1,9 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #24252a;
-  }
-
-h1 {
-    font-family: "Montserrat, sans-serif";
-    font-weight: 500;
-    font-size: 50px;
-    color: #edf0f1;
-    text-align: center;
-  }
-
-  h2 {
-    padding-bottom: 20px;
-    padding: 5px;
-    max-width: 960px;
-    width: 95%;
-    margin: 20px auto;
-    color: #edf0f1;
-    text-align: center;
-    font-family: "Montserrat, sans-serif"
-  }
-
-  .logo {
-    width: 100px;
-  }
-
-  .nav_links {
-    list-style: none;
-    background-color: #edf0f1;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap");
   
-  .nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-  }
-  
-  .nav_links li a {
-    transition: all 0.3s ease 0s;
-  }
-
-  .nav_links li a:hover {
-    color: #0088a9;
-  }
-
-  button {
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: rgba(0, 136, 169, 0.8);
-  }
-
-  li,
-a,
-button {
-  font-family: "Montserrat, sans-serif";
-  font-weight: 500;
-  font-size: 16px;
-  color: #edf0f1;
-  text-decoration: none;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-  }
-
-.columns {
-    font-family: "Montserrat, sans-serif";
-    color: #edf0f1;
-    padding: 5px;
-    max-width: 960px;
-    width: 95%;
-    margin: 20px auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
-
-  .column {
-    flex: 1;
-    border: 1px solid black;
-    margin: 2px;
-    padding: 20px;
-    transition: 1s;
-  }
-
-  .column.flipped {
-    cursor: pointer;
-    transform: rotateY(180deg);
-  }
-
-  p{
-    color: #edf0f1;
-  }
-
-  section{
-    color: #edf0f1;
-  }
-
-  .flip-box-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-
-  .flip-box:active .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-
-  .flip-box-front {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-
-  .flip-box-back {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-
-
-  .flip-box-front {
-    background-color: #bbb;
-    color: black;
-  }
-
-  .flip-box-back {
-    background-color: dodgerblue;
-    color: black;
-    transform: rotateY(180deg);
-  } */
-
   body{
     padding: 50px;
+    background-color: #F5F5F4;
+    font-family: "Plus Jakarta Sans"
   }
 
   .logo {
@@ -225,14 +73,12 @@ header {
   }
   
   h1 {
-    font-family: "Montserrat, sans-serif";
     font-weight: 500;
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
   }
   
   .instructions {
-    font-family: "Montserrat, sans-serif";
     font-weight: 500;
     font-size: 20px;
     text-align: center;
@@ -343,15 +189,16 @@ header {
 
   #Form1{
     margin-bottom:50px;
-    border: black solid 2px;
-    border-radius: 1em;
+    padding-top: 20px;
+    border-top: black solid 2px;
+    display:flex;
+    justify-content: center;
   }
 
   #Form2{
     margin-top:50px;
     padding: 10px;
-    border: black solid 2px;
-    border-radius: 1em;
+    border-top: black solid 2px;
   }
 
   .submitButton{
@@ -396,4 +243,14 @@ header {
     margin-left: 10px;
     font-size: 18px;
     color: orange;
+  }
+
+  #audio{
+    border-top: black solid 2px;
+    padding-top:40px;
+  }
+
+  #musicReview{
+    margin-left:200px;
+    margin-right: 200px;
   }
