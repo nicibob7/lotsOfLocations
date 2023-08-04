@@ -171,6 +171,16 @@ h2 {
   margin: 10px;
 }
 
+  #musicReview{
+    margin-left:200px;
+    margin-right: 200px;
+  }
+
+  .cardText{
+    padding:20px;
+    margin-left:10px;
+    margin-right:10px;
+  }
 input[type="text"] {
   align-content: right;
   margin-left: 50px;
@@ -270,4 +280,10 @@ input[type="text"] {
 #musicReview {
   margin-left: 200px;
   margin-right: 200px;
+}
+
+.cardText{
+  padding:20px;
+  margin-left:10px;
+  margin-right:10px;
 }
