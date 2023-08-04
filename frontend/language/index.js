@@ -1,3 +1,8 @@
+window.onload = function() {
+  window.scrollTo(0, 0);
+};
+
+
 //vamo arriba
 
 function playVamoArriba() {
