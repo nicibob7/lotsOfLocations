@@ -9,6 +9,7 @@ body {
 
 .logo {
   width: 100px;
+  transform: scale(1.5);
 }
 
 .nav_links {
