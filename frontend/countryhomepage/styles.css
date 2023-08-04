@@ -1,147 +1,144 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap");
 
-*{
-font-family: "Plus Jakarta Sans", sans-serif;
-font-size: 20px;
-margin: 0;
-padding: 0;
-color: #333333;
-
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  color: #333333;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
-  }
-
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
 
 header,
 #cards,
-.card-group{
-    background-color: #f5f5f4;
-    
+.card-group {
+  background-color: #f5f5f4;
 }
 
-#cards{
- margin-right: -0.5rem;
+#cards {
+  margin-right: -0.5rem;
 }
 
 .logo {
-    width: 100px;
-    display: flex;
-  }
+  width: 100px;
+  transform: scale(1.5);
+  display: flex;
+}
 
-h2{
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+h2 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .nav_links {
-    list-style: none;
-    
-  }
-  
-  .nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-  }
-  
-  .nav_links li a {
-    transition: all 0.3s ease 0s;
-    position: relative;
-  }
-  
-  .nav_links li a:hover {
-    color: #77dd77;
-  }
-  
-  .nav_links li a::before {
-    content: "";
-    position: absolute;
-    bottom: -10px; /* Adjust as needed */
-    width: 100%;
-    height: 2px; /* thickness */
-    background-color: #77dd77;
-    transform: scaleX(0); /* Initially hidden */
-    transform-origin: center bottom; /* Origin at left bottom */
-    transition: transform 0.5s ease;
-  }
-  
-  .nav_links li a:hover::before {
-    transform: scaleX(1); /* Show underline on hover */
-  }
-  
-  button {
-    padding: 9px 25px;
-    background-color: #aad3de;
-    border: none;
-    border-radius: 50px;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    display: flex;
-  }
-  
-  button:hover {
-    background-color: #77dd77;
-  }
-  
-  li,
-  a,
-  button {
-    text-decoration: none;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10%;
-  }
-  
-  .title {
-    font-size: 70px;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  
-  h1 {
-    font-size: 50px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-.jumbopara{
-    margin-bottom: 2rem ;
+  list-style: none;
 }
 
-.jumbotron { 
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color:#aad3de !important;
-    border-radius: 0.3rem;
-    width: 100%;
-    margin: auto;
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
 }
 
- .video{
-    margin-top: 0.5rem;
-} 
-
-.marina{
-    float: right;
-    max-width: 25rem;
-    max-height: 25rem;
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+  position: relative;
 }
 
-.card{
-    text-align: center;
+.nav_links li a:hover {
+  color: #77dd77;
 }
 
-
-p .card-text{
-    text-align: center;
+.nav_links li a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust as needed */
+  width: 100%;
+  height: 2px; /* thickness */
+  background-color: #77dd77;
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: center bottom; /* Origin at left bottom */
+  transition: transform 0.5s ease;
 }
 
+.nav_links li a:hover::before {
+  transform: scaleX(1); /* Show underline on hover */
+}
+
+button {
+  padding: 9px 25px;
+  background-color: #aad3de;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  display: flex;
+}
+
+button:hover {
+  background-color: #77dd77;
+}
+
+li,
+a,
+button {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10%;
+}
+
+.title {
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.jumbopara {
+  margin-bottom: 2rem;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #aad3de !important;
+  border-radius: 0.3rem;
+  width: 100%;
+  margin: auto;
+}
+
+.video {
+  margin-top: 0.5rem;
+}
+
+.marina {
+  float: right;
+  max-width: 25rem;
+  max-height: 25rem;
+}
+
+.card {
+  text-align: center;
+}
+
+p .card-text {
+  text-align: center;
+}
