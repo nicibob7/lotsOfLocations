@@ -1,7 +1,190 @@
-.logo {
-    max-width: 80px;
-    max-height: auto;
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap");
+
+*,html{
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
+  background-color: f5f5f4;
+  margin: 0;
+  padding: 0;
 }
+
+.logo {
+  transform: scale(1.5);
+  width: 100px;
+  height: 100px;
+  object-fit: fit;
+  
+}
+
+/* Add background color to the introduction section */
+.introduction {
+  background-color: #f5f5f4;
+  padding: 20px;
+  
+   /* Add some padding to separate content from the background */
+}
+
+.introduction-container {
+  background-color: #f5f5f4;
+  padding: 45px;
+  
+}
+
+h2{
+  /* background-color: #f5f5f4; */
+  padding: 20px;
+  margin: 40px;
+  height: 100%;
+}
+/* Add background color to the topsection section */
+.topsection {
+  background-color: #f5f5f4;
+  padding: 20px; /* Add some padding to separate content from the background */
+}
+
+/* Add background color to the flashcards section */
+.flashcards {
+  background-color: #f5f5f4;
+  padding: 20px; /* Add some padding to separate content from the background */
+}
+
+/* Add background color to the youtube section */
+#youtube {
+  background-color: #f5f5f4;
+  padding: 20px;
+}
+
+
+
+body {
+  margin: 0;
+  display: block;
+  justify-content: center;
+align-items: center;
+background-color: #f5f5f4;
+height: 100vh; 
+overflow-x: hidden;
+}
+
+.nav_links {
+  list-style: none;
+  font-size: 18px;
+ 
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 30px;
+  color: #77dd77;
+  
+  
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+  position: relative;
+  text-decoration: none;
+  color: #333333;
+
+}
+
+.nav_links li a:hover {
+  color: #77dd77;
+}
+
+.nav_links li a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust as needed */
+  width: 100%;
+  height: 2px; /* thickness */
+  background-color: #77dd77;
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: center bottom; /* Origin at left bottom */
+  transition: transform 0.5s ease;
+}
+
+.nav_links li a:hover::before {
+  transform: scaleX(1); /* Show underline on hover */
+  
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10%;
+  background-color: #f5f5f4;
+  
+}
+
+
+button {
+  margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+  }
+  
+  .home > button {
+    background-color: #aad3de;
+    border-radius: 60px;
+    padding: 5px 20px;
+  }
+  
+  p {
+    color: #333333;
+  }
+  
+  .home > button:hover {
+    background-color: #77dd77;
+    border-radius: 60px;
+    
+    padding: 5px 20px;
+  }
+
+
+h1 {
+  font-size: 70px;
+ background-color: #f5f5f4;
+ border-bottom: #77dd77;
+ padding: 30px;
+ margin-bottom: 40px;
+ margin-top: 40px;
+ display: block;
+ width: -300px;
+ border-bottom: 3px solid #aad3de;
+ 
+  
+ }
+
+ h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333333;
+    background-color: #f5f5f4;
+   
+ }
+
+ h2 {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #aad3de;
+    /* border: 1px solid #333333; */
+    padding: 10px;
+    color: black;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 30px;
+    color: #333333;
+    
+ }
+
+#youtube{
+  text-align: center;
+  bottom:  -45rem;
+}
+
 
 
 .audio-player {
@@ -26,5 +209,34 @@
   }
   
 
-  
+.Lunfardo{
+  max-width: 300px;
+  max-height: auto;
+}
 
+li{
+  list-style-type: none;
+}
+
+.voseo{
+  max-width: 300px;
+  max-height: auto;
+}
+
+h6{
+  text-align: center;
+}
+
+.audiopara{
+  position: relative;
+  top: -10rem;
+}
+
+h3 > a{
+  font-size: 30px;
+  color: black;
+}
+
+h3 > a:hover {
+  color:#aad3de;
+}
