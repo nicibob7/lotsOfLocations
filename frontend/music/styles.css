@@ -154,7 +154,10 @@ header {
     transform: rotateY(180deg);
   } */
 
-  
+  body{
+    padding: 50px;
+  }
+
   .logo {
     width: 100px;
   }
@@ -276,21 +279,36 @@ header {
   }
 
   #front1{
-    background-image: url("https://img.theculturetrip.com/wp-content/uploads/2017/01/candombe3.jpg/")
+    background-image: url("https://www.civitatis.com/f/uruguay/montevideo/galeria/chico-candombe.jpg");
+    background-size: cover;
   }
 
   #front2{
-    background-image: url("https://pampeano.co.uk/cdn/shop/articles/4274.jpg")
+    background-image: url("https://img.benvaughn.com/1666252762624.jpg");
+    background-size: cover;
   }
 
   #front3{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Murgas_%28Vazquez%2C_Marzo_2005_-1%29.jpg/1200px-Murgas_%28Vazquez%2C_Marzo_2005_-1%29.jpg")
+    background-image: url("https://uruguaymusical.com/wp-content/uploads/2021/03/el-cuarteto-del-amor-uy.jpg");
+    background-size: cover;
   }
 
   #front4{
-    background-image: url("https://www.latercera.com/resizer/EpZDke7Ibx_w1W_-Sr42DcYogLY=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/S6MKZMC2P5BW3FH5TRLAANGV5I.jpg")
+    background-image: url("https://www.sala-apolo.com/uploads/media/default/0001/03/thumb_2342_default_wide.jpeg");
+    background-size: cover;
   }
 
+  #front5{
+    background-image: url("https://www.guruguay.com/wp-content/uploads/2017/07/Carnival-Murga-e1613215218498.jpg");
+    background-size: cover;
+  }
+
+  #front6{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a9/Eduardo_Mateo_disco_Mateo_solo_bien_se_Lame_1972_Argentina.jpg");
+    background-size: cover;
+  }
+
+  
   .back{
     background-color: white;
     transform: rotateY(180deg);
@@ -310,12 +328,72 @@ header {
     margin-right: 50px;
   }
 
-  #two{
-    width: 100px;
-    background-color: green;
+  #two, #three{
+    display: block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    font-size:16px;
   }
 
-  #three{
-    width: 100px;
-    background-color: green;
+  #boxes{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  #Form1{
+    margin-bottom:50px;
+    border: black solid 2px;
+    border-radius: 1em;
+  }
+
+  #Form2{
+    margin-top:50px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 1em;
+  }
+
+  .submitButton{
+    display:flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  #button2{
+    padding-top: 20px;
+  }
+
+  #musicQuiz1, #musicQuiz2, #musicQuiz3, #musicQuiz4, #musicQuiz5{
+    font-size: 18px;
+    height:40px;
+    width: 350px;
+  }
+
+  #question1, #question2, #question3, #question4, #question5{
+    font-size: 18px;
+  }
+
+  #ReviewLabel, #Review, #ReviewNameLabel, #ReviewName, #Reviews{
+    font-size: 18px;
+  }
+
+ #ReviewName{
+    height:40px;
+    width: 350px;
+  }
+
+  #Review{
+    display: block;
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    margin: 10px;
+    margin-left: 0px;
+  }
+  
+  #answer, #correctAnswers{
+    margin-left: 10px;
+    font-size: 18px;
+    color: orange;
   }

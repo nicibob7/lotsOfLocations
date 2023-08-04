@@ -136,6 +136,12 @@ function checkAnswer(value){
     solutions += data[data.length - 1]
     console.log(solutions)
     document.querySelector("#answer").textContent = `You scored ${counter}/${data.length}`
+    if(counter === data.length){
+        document.querySelector("#answer").style.color = "green";
+    }
+    if(counter === 0 || counter === 1){
+        document.querySelector("#answer").style.color = "red";
+    }
     document.querySelector("#correctAnswers").textContent =`The correct answers were: ${solutions}.`
     arr = []
     console.log(arr)
@@ -147,15 +153,21 @@ function getReview(e){
     e.preventDefault()
     console.log(e.target.Review.value)
     review = e.target.Review.value
+    e.target.Review.value = ""
 }
 
 async function getName(e){
     e.preventDefault()
     console.log(e.target.ReviewName.value)
     reviewer = e.target.ReviewName.value
+    e.target.ReviewName.value = ""
     let reviewObj = {}
     reviewObj["name"] = reviewer
     reviewObj["text"] = review
+    if(!(reviewer || review)){
+        alert("Please enter a review and your name")
+        return
+    }
     console.log(reviewObj)
 
     const options = {

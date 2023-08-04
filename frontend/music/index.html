@@ -27,9 +27,9 @@
     
 
 <h1>Music</h1>
-<h2>Uruguay has a rich musical heritage that spans various genres and styles. 
- Traditional Uruguayan music is deeply influenced by European, African, and indigenous cultures.
+<h2>Hover over the images to learn about a few of the most popular genres and greatest musicians of Uruguay
 </h2>
+<div id="boxes">
 <div class="flex-container">
 <div class="container">
 <div class="card">
@@ -50,9 +50,9 @@
   </div>
   </div>
   </div>
-</div>
 
-<div class="flex-container">  
+
+  
 <div class="container">
     <div class="card">
     <div id="front3" class="front"></div>
@@ -62,7 +62,9 @@
     </div>
     </div>
     </div>
+    </div>
 
+    <div class="flex-container">
     <div class="container">
       <div class="card">
       <div id="front4" class="front"></div>
@@ -72,10 +74,32 @@
       </div>
       </div>
       </div>
+
+  <div class="container">
+    <div class="card">
+    <div id="front5" class="front"></div>
+    <div class ="back">
+      <h3>back of card</h3>
+      <p>This is an image</p>
+    </div>
+    </div>
     </div>
 
-<section>
+<div class="container">
+  <div class="card">
+  <div id="front6" class="front"></div>
+  <div class ="back">
+    <h3>back of card</h3>
+    <p>This is an image</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+<section id="Form1">
 <form id="musicForm">
+  <h2>Quiz! Answer the following questions based on the information above</h2>
         <div class="one">
         <label id="question1" for="musicQuiz1">What is the most popular genre in Uruguay?</label>
             <input id="musicQuiz1" type="text" name="musicQuiz1" placeholder="Answer">
@@ -96,31 +120,38 @@
         <label id="question5" for="musicQuiz5">What is the capital city of Uruguay?</label>    
             <input id="musicQuiz5" type="text" name="musicQuiz5" placeholder="Answer">
             </div>
-            <div class="one">
-            <input id="two" type="submit" value ="Check">
+            <div class = "submitButton">
+            <input id="two" type="submit" value ="Check Answers">
           </div>
 </form>
     <p id="answer"></p>
     <p id ="correctAnswers"></p>
- <p>These are just a few examples of the diverse
-     musical landscape in Uruguay. The country's
-      music reflects its multicultural history
-       and the creative spirit of its people.</p>
+</section>
+
+<h2>Listen to music from some of Uruguy's finest</h2>
+<div class="submitButton">
+<audio controls>
+  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/ImperialMarch60.wav" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio controls>
+  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/CantinaBand60.wav" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+</div>
+
+<section id="Form2">
+  <h2>Review section - Tell us about your favourite music from Uruguay</h2>
   <form id="musicReview">
-    <label for="Review">Tell us about your favourite Uruguayan music!</label>
+    <label id="ReviewLabel" for="Review"></label>
         <input id="Review" type="text" name="Review" placeholder="Review">
-    <label for="ReviewName">Your name</label>    
+    <label id="ReviewNameLabel" for="ReviewName">Your name</label>    
         <input id="ReviewName" type="text" name="ReviewName" placeholder="Name">
+        <div class="submitButton" id = "button2">
         <input id="three" type="submit" value ="Post">
+      </div>
   <p id="Reviews"></p>
-  <audio controls>
-      <source src="https://www2.cs.uic.edu/~i101/SoundFiles/ImperialMarch60.wav" type="audio/mpeg">
-      Your browser does not support the audio element.
-  </audio>
-  <audio controls>
-      <source src="https://www2.cs.uic.edu/~i101/SoundFiles/CantinaBand60.wav" type="audio/mpeg">
-      Your browser does not support the audio element.
-  </audio>
+
 </section>
 </body>
 
