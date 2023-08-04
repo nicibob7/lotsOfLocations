@@ -4,6 +4,8 @@
   font-family: "Plus Jakarta Sans";
   font-size: 20px;
   background-color: #f5f5f4;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -13,6 +15,35 @@
   object-fit: fit;
   
 }
+
+/* Add background color to the introduction section */
+.introduction {
+  background-color: #f5f5f4;
+  padding: 20px; /* Add some padding to separate content from the background */
+}
+
+/* Add background color to the topsection section */
+.topsection {
+  background-color: #f5f5f4;
+  padding: 20px; /* Add some padding to separate content from the background */
+}
+
+/* Add background color to the flashcards section */
+.flashcards {
+  background-color: #f5f5f4;
+  padding: 20px; /* Add some padding to separate content from the background */
+}
+
+/* Add background color to the youtube section */
+#youtube {
+  background-color: #f5f5f4;
+  padding: 20px; /* Add some padding to separate content from the background */
+}
+
+/* Add background color to the footer (if you have one) */
+footer {
+  background-color: #f5f5f4;
+  padding: 20px; /* Add some pad
 
 
 
@@ -73,6 +104,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 5px 10%;
+  background-color: #f5f5f4;
   
 }
 
@@ -106,7 +138,7 @@ h1 {
   font-size: 70px;
   border: 2px solid #77dd77;
   border-radius: 60px;
- 
+ background-color: #f5f5f4;
   
  }
 
@@ -116,6 +148,7 @@ h1 {
     margin-left: 120px;
     margin-right: 120px;
     color: #333333;
+    background-color: #f5f5f4;
  }
 
  h2 {
