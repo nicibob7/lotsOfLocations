@@ -1,5 +1,7 @@
+/* Imports "Jakarta Sans" stylesheet */
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap");
 
+/* Applies the following styles to all elements in the document */
 * {
   font-family: "Plus Jakarta Sans";
   font-size: 20px;
@@ -9,16 +11,16 @@
 }
 
 img.logo {
-  transform: scale(1.5);
+  transform: scale(1.5); /* Scale the image by 1.5 times */
   width: 100px;
 }
 
 .nav_links {
-  list-style: none;
+  list-style: none; /* Remove the bullet points from list items */
 }
 
 .nav_links li {
-  display: inline-block;
+  display: inline-block; /* Displays list items side by side */
   padding: 0px 20px;
 }
 
@@ -32,14 +34,14 @@ img.logo {
 }
 
 .nav_links li a::before {
-  content: "";
+  content: ""; /* Empty content before the hyperlink text for underline effect */
   position: absolute;
-  bottom: -10px; /* Adjust as needed */
+  bottom: -10px;
   width: 100%;
   height: 2px; /* thickness */
   background-color: #77dd77;
   transform: scaleX(0); /* Initially hidden */
-  transform-origin: center bottom; /* Origin at left bottom */
+  transform-origin: center bottom; /* Origin at centre bottom */
   transition: transform 0.5s ease;
 }
 
@@ -53,7 +55,7 @@ button {
   border: none;
   border-radius: 50px;
   transition: all 0.3s ease 0s;
-  cursor: pointer;
+  cursor: pointer; /* Change the cursor to a pointer on hover (indicating it's clickable) */
 }
 
 button:hover {
@@ -63,7 +65,7 @@ button:hover {
 li,
 a,
 button {
-  text-decoration: none;
+  text-decoration: none; /* USELESS??? */
 }
 
 header {
@@ -96,7 +98,7 @@ h2 {
   padding: 5px;
   max-width: 960px;
   width: 95%;
-  margin: 0px auto;
+  margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
