@@ -9,6 +9,14 @@ color: #333333;
 
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+  }
+
+
 header,
 #cards,
 .card-group{
@@ -112,7 +120,7 @@ h2{
 .jumbotron { 
     padding: 2rem 1rem;
     margin-bottom: 2rem;
-    background-color:#EBFFD0!important;
+    background-color:  #B3E4CB !important;
     border-radius: 0.3rem;
     width: 100%;
     margin: auto;
