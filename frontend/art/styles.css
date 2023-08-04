@@ -1,9 +1,12 @@
-* {
-  font-family: monospace;
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap");
+
+*{
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
 }
 
 .logo {
-  
+  transform: scale(1.5);
   width: 100px;
   height: 100px;
   object-fit: fit;
@@ -30,7 +33,6 @@ body {
     display: inline-block;
     padding: 0px 30px;
     color: #77dd77;
-    margin-right: 28px;
     
     
   }
@@ -110,16 +112,18 @@ body {
  }
 
  h1 {
-  font-size: 40px;
+  font-size: 70px;
   border: 2px solid #77dd77;
+  border-radius: 60px;
+ 
   
  }
 
  h1, h2 {
     text-align: center;
     margin-top: 20px;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 120px;
+    margin-right: 120px;
     color: #333333;
  }
 
@@ -127,7 +131,8 @@ body {
     cursor: pointer;
     border-radius: 20px;
     background-color: #aad3de;
-    border: 1px solid #333333;
+    /* border: 1px solid #333333; */
+    padding: 10px;
     color: black;
     margin-left: 90px;
     margin-right: 90px;
@@ -161,7 +166,6 @@ margin-top: 10px;
 .home > button {
   background-color: #aad3de;
   border-radius: 60px;
-  font-size: 15px;
   padding: 5px 20px;
 }
 
@@ -172,6 +176,10 @@ p {
 .home > button:hover {
   background-color: #77dd77;
   border-radius: 60px;
-  font-size: 15px;
+  
   padding: 5px 20px;
+}
+
+#drawing > button {
+  font-size: 12px;
 }
