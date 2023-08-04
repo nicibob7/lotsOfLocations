@@ -5,83 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uruguay Homepage</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="index.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="../history/lol.png" alt="the LOL icon of a world between two capital letter Ls" class="logo">
-            <h1>
-               Uruguay <span>&#127482;&#127486;</span>
-            </h1>
-            <ul>
-              <a href="https://lots-of-locations-lol.onrender.com/"> <li> Back to Homepage</li></a>  
-             </ul>
-        </nav>
-    </header>
+
+  <header class="header">
+    <img class="logo" src="../history/lol3.png" alt="logo" />
+    <nav>
+      <ul class="nav_links">
+        <li><a href="/music/"><h3>Music</h3></a></li>
+        <li><a href="/art/"><h3>Art</h3></a></li>
+        <li><a href="/history/"><h3>History</h3></a></li>
+        <li><a href="/language/"><h3>Language</h3></a></li>
+      </ul>
+    </nav>
+    <a class="home" href="/map/"><button>Home</button></a>
+  </header>
+
+
+  <main role="main">
+      <div class="row">
+      <div class="jumbotron">
+    <h1>
+     <img src="./uruguay-flag-icon-64.png" alt="Uruguay Flag"> Uruguay <img src="./uruguay-flag-icon-64.png" alt="Uruguay Flag"> 
+   </h1>
     <h2>
-      Discover the Hidden Gem of South America!
+      Discover the hidden gem of South America!
     </h2>
+                      </div>
+  <div class="row jumbotron">
+    <div class="col">
     <section class="introduction">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ydNfvv89idA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p id="weatherSection" class="weather"> Loading weather data... </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ydNfvv89idA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="video"></iframe>
         <section id="weatherSection">
-         <p id="weatherSection"> Loading weather data...
-
-         </p>
+         
         </section>
- <p>
-    Nestled on South America's southeastern coast, Uruguay is a captivating country with a rich history, diverse culture, and stunning landscapes. Explore golden beaches, rolling hills, and nature reserves teeming with wildlife. Embrace the warm hospitality of the "Charrúas," the friendly locals. 
-    </p>
-    <p>Experience the nation's pride in its Spanish, African, and indigenous heritage through music, dance, and celebrations. Delight your taste buds with mouthwatering delicacies like "asado" and "mate." Uruguay's commitment to sustainability and education shines brightly. From vibrant cities to charming towns, Uruguay offers a unique and unforgettable journey into its hidden wonders. </p>
+        </div>
+       <div class="col">  
+ <p class="jumbopara">
+    Nestled on South America's southeastern coast, Uruguay is a captivating country with a rich history, diverse culture, and stunning landscapes.</p> <img src="./uruguay.jpg" alt="A Uruguay marina" class="marina">
+   <p class="jumbopara"> Explore golden beaches, rolling hills, and nature reserves teeming with wildlife. Embrace the warm hospitality of the "Charrúas," the friendly locals. </p> 
+    
+    <p class="jumbopara">Experience the nation's pride in its Spanish, African, and indigenous heritage through music, dance, and celebrations. Delight your taste buds with mouthwatering delicacies like "asado" and "mate." </p> <p class="jumbopara">Uruguay's commitment to sustainability and education shines brightly. From vibrant cities to charming towns, Uruguay offers a unique and unforgettable journey into its hidden wonders. </p>
     </section>
+         </div>  
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="card-group">
-   <div class="card text-center" style="width: 50rem;">
-    <p class="card-text" style="font-size: 80px">&#127926; &#128251;</p>
+<section id="cards">
+  <div class="row">
+  <div class="col">
+   <div class="card h-100 card-group">
+    <div class="card-group">
+      <div class="text-center">
+    <p class="card-text" style="font-size: 90px" >&#127926; &#128251;</p>
     <div class="card-body">
-    <a href="https://lots-of-locations-lol.onrender.com/music/" class="card-link"> 
-    <h3 class="card-title">Music </a></h3> 
+    <a href="https://lots-of-locations-lol.onrender.com/music/ " class="card-link stretched-link"> 
+    <h3 class="card-title">Music</h3>  </a>
     <p class="card-text"> Discover the Rhythms of Uruguay! </p>
     <p class="card-text">  Welcome to an immersive musical journey through Uruguay, a land of enchanting melodies and captivating rhythms.   </p>   
-            </div>
+            </div> 
         </div>
+      </div>
+  </div>
+</div>
+  
 
-        <div class="card text-center" style="width: 50rem;">
-        <p class="card-text"  style="font-size: 80px"> &#127912; &#127917; </p>   
+      <div class="col">
+        <div class="card h-100 card-group">
+          <div class="text-center">
+        <p class="card-text"  style="font-size:90px"> &#127912; &#127917; </p>   
         <div class="card-body">
-      <a href="https://lots-of-locations-lol.onrender.com/art/" class="card-link"><h3 class="card-text text-centertext-center"> Art </h3></a>
+      <a href="https://lots-of-locations-lol.onrender.com/art/" class="card-link stretched-link"><h3 class="card-title"> Art </h3></a>
     <p class="card-text"> Unleash the Colors of Uruguay's Art!   </p>
     <p class="card-text"> Immerse yourself in the vibrant world of Uruguayan art, where creativity knows no bounds.   </p>
          </div>
+        </div>
+      </div>
     </div>
     
-   <div class="card text-center" style="width: 50rem;">
-    <p class="card-text" style="font-size: 80px">  &#127963; &#128220;</p>
+    <div class="col">
+   <div class="card h-100 card-group">
+    <div class="text-center">
+    <p class="card-text" style="font-size: 90px">  &#127963; &#128220;</p>
     <div class="card-body">
-      <a href="https://lots-of-locations-lol.onrender.com/history" class="card-link"><h3 class="card-title"> History </h3></a> 
+      <a href="https://lots-of-locations-lol.onrender.com/history" class="card-link stretched-link"><h3 class="card-title"> History </h3></a> 
         <p class="card-text"> Journey through Uruguay's Rich History! </p>
     <p class="card-text"> Step back in time and explore the captivating story of Uruguay, a nation steeped in diverse cultural heritage. </p>
   </div>
   </div>
+</div>
+</div>
    
-
-  <div class="card text-center" style="width: 50rem;">
-    <p class="card-text" style="font-size: 80px">&#128172; &#128483; </p>
+<div class="col">
+  <div class="card h-100 card-group">
+    <div class="text-center">
+    <p class="card-text" style="font-size: 90px">&#128172; &#128483; </p>
     <div class="card-body">
-       <a href="https://lots-of-locations-lol.onrender.com/language" class="card-link"> <h3 class="card-title"> Language </h3> </a>
+       <a href="https://lots-of-locations-lol.onrender.com/language" class="card-link stretched-link"> <h3 class="card-title"> Language </h3> </a>
         <p class="card-text"> Dive into the World of Uruguayan Spanish!  </p>
         <p class="card-text"> Discover the unique language that shapes Uruguay's identity. Explore the fascinating blend of Spanish with a splash of Rioplatense dialect.  </p>
             </div>
+          </div>
         </div>
-    </div>    
+    </div>  
+  </div>  
+  </div>
+</div>
+</div>
+</section>
 
-
-
-
-    <footer>
-        LOL Initiative 2023
-    </footer>
+  </main>
 </body>
 </html>
