@@ -26,6 +26,7 @@ body {
   .nav_links {
     list-style: none;
     font-size: 18px;
+    padding-left: 0px;
    
   }
   
