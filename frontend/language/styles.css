@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap");
 
-*,html{
+*,
+html {
   font-family: "Plus Jakarta Sans";
   font-size: 20px;
   background-color: #f5f5f4;
@@ -13,24 +14,22 @@
   width: 100px;
   height: 100px;
   object-fit: fit;
-  
 }
 
 /* Add background color to the introduction section */
 .introduction {
   background-color: #f5f5f4;
   padding: 20px;
-  
-   /* Add some padding to separate content from the background */
+
+  /* Add some padding to separate content from the background */
 }
 
 .introduction-container {
   background-color: #f5f5f4;
   padding: 45px;
-  
 }
 
-h2{
+h2 {
   background-color: f5f5f4;
   padding: 20px;
   margin: 40px;
@@ -54,30 +53,25 @@ h2{
   padding: 20px;
 }
 
-
-
 body {
   margin: 0;
   display: block;
   justify-content: center;
-align-items: center;
-background-color: #f5f5f4;
-height: 100vh; 
-overflow-x: hidden;
+  align-items: center;
+  background-color: #f5f5f4;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .nav_links {
   list-style: none;
   font-size: 18px;
- 
 }
 
 .nav_links li {
   display: inline-block;
   padding: 0px 30px;
   color: #77dd77;
-  
-  
 }
 
 .nav_links li a {
@@ -85,7 +79,6 @@ overflow-x: hidden;
   position: relative;
   text-decoration: none;
   color: #333333;
-
 }
 
 .nav_links li a:hover {
@@ -106,7 +99,6 @@ overflow-x: hidden;
 
 .nav_links li a:hover::before {
   transform: scaleX(1); /* Show underline on hover */
-  
 }
 
 header {
@@ -115,127 +107,118 @@ header {
   align-items: center;
   padding: 5px 10%;
   background-color: #f5f5f4;
-  
 }
-
 
 button {
   margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    
-  }
-  
-  .home > button {
-    background-color: #aad3de;
-    border-radius: 60px;
-    padding: 5px 20px;
-  }
-  
-  p {
-    color: #333333;
-  }
-  
-  .home > button:hover {
-    background-color: #77dd77;
-    border-radius: 60px;
-    
-    padding: 5px 20px;
-  }
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
+.home > button {
+  background-color: #aad3de;
+  border-radius: 60px;
+  padding: 5px 20px;
+}
+
+p {
+  color: #333333;
+}
+
+.home > button:hover {
+  background-color: #77dd77;
+  border-radius: 60px;
+
+  padding: 5px 20px;
+}
 
 h1 {
   font-size: 70px;
- background-color: #f5f5f4;
- border-bottom: #77dd77;
- padding: 30px;
- margin-bottom: 40px;
- margin-top: 40px;
- display: block;
- width: -300px;
-  
- }
-
- h1, h2 {
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 120px;
-    margin-right: 120px;
-    color: #333333;
-    background-color: #f5f5f4;
- }
-
- h2 {
-    cursor: pointer;
-    border-radius: 20px;
-    background-color: #aad3de;
-    /* border: 1px solid #333333; */
-    padding: 10px;
-    color: black;
-    margin-left: 90px;
-    margin-right: 90px;
-    margin-bottom: 30px;
-    margin-top: 40px;
-    color: #333333;
- }
-
-#youtube{
-  text-align: center;
-  bottom:  -45rem;
+  background-color: #f5f5f4;
+  border-bottom: #77dd77;
+  padding: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  display: block;
+  width: -300px;
 }
 
+h1,
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 120px;
+  margin-right: 120px;
+  color: #333333;
+  background-color: #f5f5f4;
+}
 
+h2 {
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #aad3de;
+  /* border: 1px solid #333333; */
+  padding: 10px;
+  color: black;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  color: #333333;
+}
+
+#youtube {
+  text-align: center;
+  bottom: -45rem;
+}
 
 .audio-player {
-    --player-button-width: 3em;
-    --sound-button-width: 2em;
-    width: 15rem;
-    height: 15rem;
-  }
-  
+  --player-button-width: 3em;
+  --sound-button-width: 2em;
+  width: 15rem;
+  height: 15rem;
+}
 
-  
-  .player-button1,
-  .player-button2,
-  .player-button3,
-  .player-button4,
-  .player-button5{
-    background-color: transparent;
-    border: 0;
-    width: var(--player-button-width);
-    height: var(--player-button-width);
-    cursor: pointer;
-  }
-  
+.player-button1,
+.player-button2,
+.player-button3,
+.player-button4,
+.player-button5 {
+  background-color: transparent;
+  border: 0;
+  width: var(--player-button-width);
+  height: var(--player-button-width);
+  cursor: pointer;
+}
 
-.Lunfardo{
+.Lunfardo {
   max-width: 300px;
   max-height: auto;
 }
 
-li{
+li {
   list-style-type: none;
 }
 
-.voseo{
+.voseo {
   max-width: 300px;
   max-height: auto;
 }
 
-h6{
+h6 {
   text-align: center;
 }
 
-.audiopara{
+.audiopara {
   position: relative;
   top: -10rem;
 }
 
-h3 > a{
+h3 > a {
   font-size: 30px;
   color: black;
 }
 
 h3 > a:hover {
-  color:#aad3de;
+  color: #aad3de;
 }

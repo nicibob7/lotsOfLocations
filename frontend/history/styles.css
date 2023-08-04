@@ -17,11 +17,12 @@ img.logo {
 
 .nav_links {
   list-style: none; /* Remove the bullet points from list items */
+  padding-left: 0px;
 }
 
 .nav_links li {
   display: inline-block; /* Displays list items side by side */
-  padding: 0px 20px;
+  padding: 0px 30px;
 }
 
 .nav_links li a {
@@ -98,7 +99,7 @@ h2 {
   padding: 5px;
   max-width: 960px;
   width: 95%;
-  margin: auto;
+  margin: 0px auto; /* IS "0PX" NEEDED??? - Center the container horizontally by setting the left and right margins to "auto" */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
