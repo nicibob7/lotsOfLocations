@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 
-/* * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -110,7 +110,7 @@ header {
 
   section{
     color: #edf0f1;
-  } */
+  }
 
   .flip-box-inner {
     position: relative;
@@ -121,7 +121,7 @@ header {
     transform-style: preserve-3d;
   }
 
-  .flip-box:hover .flip-box-inner {
+  .flip-box:active .flip-box-inner {
     transform: rotateY(180deg);
   }
 
@@ -129,7 +129,7 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
@@ -138,7 +138,7 @@ header {
     top: 0px;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
@@ -152,4 +152,248 @@ header {
     background-color: dodgerblue;
     color: black;
     transform: rotateY(180deg);
+  } */
+
+  body{
+    padding: 50px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+  
+  .nav_links {
+    list-style: none;
+  }
+  
+  .nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  
+  .nav_links li a {
+    transition: all 0.3s ease 0s;
+    position: relative;
+  }
+  
+  .nav_links li a:hover {
+    color: #0088a9;
+  }
+  
+  .nav_links li a::before {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    width: 100%;
+    height: 2px; /* thickness */
+    background-color: #0088a9;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: center bottom; /* Origin at left bottom */
+    transition: transform 0.5s ease;
+  }
+  
+  .nav_links li a:hover::before {
+    transform: scaleX(1); /* Show underline on hover */
+  }
+  button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+  
+  li,
+  a,
+  button {
+    font-family: "Montserrat, sans-serif";
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+  }
+  
+  h1 {
+    font-family: "Montserrat, sans-serif";
+    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+  }
+  
+  .instructions {
+    font-family: "Montserrat, sans-serif";
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  h2 {
+    padding-bottom: 0px;
+    text-align: center;
+  }
+
+  .flex-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .container{
+    margin:10px;
+    display: block;
+    height: 500px;
+    width: 500px;
+  }
+
+  .container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg)
+  }
+
+  .card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+  }
+
+  .front,
+  .back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 20px;
+  }
+
+  #front1{
+    background-image: url("https://www.civitatis.com/f/uruguay/montevideo/galeria/chico-candombe.jpg");
+    background-size: cover;
+  }
+
+  #front2{
+    background-image: url("https://img.benvaughn.com/1666252762624.jpg");
+    background-size: cover;
+  }
+
+  #front3{
+    background-image: url("https://uruguaymusical.com/wp-content/uploads/2021/03/el-cuarteto-del-amor-uy.jpg");
+    background-size: cover;
+  }
+
+  #front4{
+    background-image: url("https://www.sala-apolo.com/uploads/media/default/0001/03/thumb_2342_default_wide.jpeg");
+    background-size: cover;
+  }
+
+  #front5{
+    background-image: url("https://www.guruguay.com/wp-content/uploads/2017/07/Carnival-Murga-e1613215218498.jpg");
+    background-size: cover;
+  }
+
+  #front6{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a9/Eduardo_Mateo_disco_Mateo_solo_bien_se_Lame_1972_Argentina.jpg");
+    background-size: cover;
+  }
+
+  
+  .back{
+    background-color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .one{
+    display: block;
+    margin: 10px;
+  }
+
+  input[type = text]{
+    align-content:right;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  #two, #three{
+    display: block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    font-size:16px;
+  }
+
+  #boxes{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  #Form1{
+    margin-bottom:50px;
+    border: black solid 2px;
+    border-radius: 1em;
+  }
+
+  #Form2{
+    margin-top:50px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 1em;
+  }
+
+  .submitButton{
+    display:flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  #button2{
+    padding-top: 20px;
+  }
+
+  #musicQuiz1, #musicQuiz2, #musicQuiz3, #musicQuiz4, #musicQuiz5{
+    font-size: 18px;
+    height:40px;
+    width: 350px;
+  }
+
+  #question1, #question2, #question3, #question4, #question5{
+    font-size: 18px;
+  }
+
+  #ReviewLabel, #Review, #ReviewNameLabel, #ReviewName, #Reviews{
+    font-size: 18px;
+  }
+
+ #ReviewName{
+    height:40px;
+    width: 350px;
+  }
+
+  #Review{
+    display: block;
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    margin: 10px;
+    margin-left: 0px;
+  }
+  
+  #answer, #correctAnswers{
+    margin-left: 10px;
+    font-size: 18px;
+    color: orange;
   }
