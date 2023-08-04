@@ -34,6 +34,7 @@ h2{
   background-color: f5f5f4;
   padding: 20px;
   margin: 40px;
+  height: 100%;
 }
 /* Add background color to the topsection section */
 .topsection {
@@ -50,13 +51,8 @@ h2{
 /* Add background color to the youtube section */
 #youtube {
   background-color: #f5f5f4;
-  padding: 20px; /* Add some padding to separate content from the background */
+  padding: 20px;
 }
-
-/* Add background color to the footer (if you have one) */
-footer {
-  background-color: #f5f5f4;
-  padding: 20px; /* Add some pad
 
 
 
@@ -66,7 +62,8 @@ body {
   justify-content: center;
 align-items: center;
 background-color: #f5f5f4;
-/* height: 100vh; */
+height: 100vh; 
+overflow-x: hidden;
 }
 
 .nav_links {
@@ -154,6 +151,8 @@ h1 {
  padding: 30px;
  margin-bottom: 40px;
  margin-top: 40px;
+ display: block;
+ width: -300px;
   
  }
 
