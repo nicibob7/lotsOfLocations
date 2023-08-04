@@ -120,9 +120,13 @@ h1 {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   background-color: #aad3de !important;
-  border-radius: 0.3rem;
   width: 100%;
   margin: auto;
+}
+
+#row {
+  border-top: 3px solid #77dd77;
+  border-bottom: 3px solid #77dd77;
 }
 
 .video {
